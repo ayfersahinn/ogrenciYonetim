@@ -47,7 +47,7 @@
                             <a href="ogrenciEkle.aspx">Öğrenci Ekle</a>
                         </li>
                         <li>
-                            <a href="#">Öğrenci Bul</a>
+                            <a href="ogrenciGuncelle.aspx">Öğrenci Güncelleme</a>
                         </li>
                         <%--<li>
                             <a href="#">Öğrenci Sil</a>

@@ -339,6 +339,7 @@
     <Content Include="Default.aspx" />
     <Content Include="ogrenciEkle.aspx" />
     <Content Include="ogrenciSil.aspx" />
+    <Content Include="ogrenciGuncelle.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSet1.Designer.cs">
@@ -374,6 +375,13 @@
     </Compile>
     <Compile Include="ogrenciSil.aspx.designer.cs">
       <DependentUpon>ogrenciSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenciGuncelle.aspx.cs">
+      <DependentUpon>ogrenciGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenciGuncelle.aspx.designer.cs">
+      <DependentUpon>ogrenciGuncelle.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
