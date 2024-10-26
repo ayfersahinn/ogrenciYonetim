@@ -14,7 +14,7 @@
     <!-- Bootstrap CSS CDN -->
     <link href="Dosyalar1/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Our Custom CSS -->
-   <%-- <link href="Dosyalar1/StyleSheet2.css" rel="stylesheet" />--%>
+    <%-- <link href="Dosyalar1/StyleSheet2.css" rel="stylesheet" />--%>
     <link href="StyleSheet.css" rel="stylesheet" />
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    
+
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -34,37 +34,40 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                     
+
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-users"></i>
-                      Öğrenci Listesi
+                        Öğrenci İşlemleri
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="Default.aspx">Öğrenci Listele</a>
+                        </li>
                         <li>
                             <a href="ogrenciEkle.aspx">Öğrenci Ekle</a>
                         </li>
                         <li>
                             <a href="#">Öğrenci Bul</a>
                         </li>
-                        <li>
+                        <%--<li>
                             <a href="#">Öğrenci Sil</a>
-                        </li>
+                        </li>--%>
                     </ul>
-                
+
                 </li>
                 <li>
-                     
+
                     <a href="#">
                         <i class="fas fa-book"></i>
                         Dersler 
                     </a>
-                
+
                 </li>
                 <li>
 
                     <a href="#">
                         <i class="fas fa-comments"></i>
-                          Mesajlar 
+                        Mesajlar 
                        
                     </a>
 

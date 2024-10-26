@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
 
         <tr>
             <th scope="col">ID</th>
@@ -12,6 +12,7 @@
             <th scope="col">TELEFON</th>
             <th scope="col">EPOSTA</th>
             <th scope="col">ŞİFRE</th>
+            <th scope="col">İŞLEMLER</th>
 
         </tr>
 
@@ -25,6 +26,10 @@
                         <td><%# Eval("OGRTEL") %></td>
                         <td><%# Eval("OGRMAIL") %></td>
                         <td><%# Eval("OGRSIFRE") %></td>
+                        <td>
+                            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-warning">Güncelle</asp:HyperLink>
+                        </td>
                     </tr>
                 </ItemTemplate>
             </asp:Repeater>
