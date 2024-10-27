@@ -86,7 +86,7 @@
                             <a href="duyuruEkle.aspx">Duyuru Ekle</a>
                         </li>
                         <li>
-                            <a href="ogrenciGuncelle.aspx">Duyuru Güncelleme</a>
+                            <a href="duyuruGuncelle.aspx">Duyuru Güncelleme</a>
                         </li>
                        
                     </ul>
