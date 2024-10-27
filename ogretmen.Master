@@ -72,12 +72,25 @@
                     </a>
 
                 </li>
-                <li>
-                    <a href="#">
+                <li class="active">
+
+                    <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-bell"></i>
-                        Duyurular 
-                       
+                        Duyurular
                     </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu2">
+                        <li>
+                            <a href="duyuruListesi.aspx">Duyuru Listele</a>
+                        </li>
+                        <li>
+                            <a href="duyuruEkle.aspx">Duyuru Ekle</a>
+                        </li>
+                        <li>
+                            <a href="ogrenciGuncelle.aspx">Duyuru Güncelleme</a>
+                        </li>
+                       
+                    </ul>
+
                 </li>
                 <li>
                     <a href="#">
