@@ -25,9 +25,17 @@ namespace ogrenciYonetim
 
         protected void btnKaydet_Click(object sender, EventArgs e)
         {
-            DataSet1TableAdapters.TBL_DUYURUTableAdapter dt = new DataSet1TableAdapters.TBL_DUYURUTableAdapter();
-            dt.duyuruGuncelle(baslik.Text, icerik.Text, Convert.ToInt32(duyuruID.Text));
-            Response.Redirect("duyuruListesi.aspx");
+            if(string.IsNullOrWhiteSpace(baslik.Text) || string.IsNullOrWhiteSpace(icerik.Text))
+            {
+                Label2.Visible = true;
+            }
+            else
+            {
+                DataSet1TableAdapters.TBL_DUYURUTableAdapter dt = new DataSet1TableAdapters.TBL_DUYURUTableAdapter();
+                dt.duyuruGuncelle(baslik.Text, icerik.Text, Convert.ToInt32(duyuruID.Text));
+                Response.Redirect("duyuruListesi.aspx");
+            }
+            
 
         }
     }
