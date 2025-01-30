@@ -41,13 +41,27 @@
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="Default.aspx">Öğrenci Listele</a>
+                            <a href="Default.aspx">
+
+                                <i class="fas fa-list-ul"></i>
+                                Öğrenci Listele
+
+                            </a>
                         </li>
                         <li>
-                            <a href="ogrenciEkle.aspx">Öğrenci Ekle</a>
+                            <a href="ogrenciEkle.aspx">
+                                <i class="fas fa-user-plus"></i>
+
+                                Öğrenci Ekle
+
+                            </a>
                         </li>
                         <li>
-                            <a href="ogrenciGuncelle.aspx">Öğrenci Güncelleme</a>
+                            <a href="ogrenciGuncelle.aspx">
+                                <i class="fas fa-edit"></i>
+                                Öğrenci Güncelleme
+
+                            </a>
                         </li>
                         <%--<li>
                             <a href="#">Öğrenci Sil</a>
