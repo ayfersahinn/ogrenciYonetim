@@ -56,16 +56,7 @@
 
                             </a>
                         </li>
-                        <li>
-                            <a href="ogrenciGuncelle.aspx">
-                                <i class="fas fa-edit"></i>
-                                Öğrenci Güncelleme
-
-                            </a>
-                        </li>
-                        <%--<li>
-                            <a href="#">Öğrenci Sil</a>
-                        </li>--%>
+                       
                     </ul>
 
                 </li>
@@ -99,9 +90,7 @@
                         <li>
                             <a href="duyuruEkle.aspx">Duyuru Ekle</a>
                         </li>
-                        <li>
-                            <a href="duyuruGuncelle.aspx">Duyuru Güncelleme</a>
-                        </li>
+                        
                        
                     </ul>
 
