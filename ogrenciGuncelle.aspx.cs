@@ -9,14 +9,14 @@ namespace ogrenciYonetim
 {
     public partial class ogrenciGuncelle : System.Web.UI.Page
     {
-       
+        DataSet1TableAdapters.TBL_OGRENCITableAdapter dt = new DataSet1TableAdapters.TBL_OGRENCITableAdapter();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 try
                 {
-                    DataSet1TableAdapters.TBL_OGRENCITableAdapter dt = new DataSet1TableAdapters.TBL_OGRENCITableAdapter();
+                    
                     int id = Convert.ToInt32(Request.QueryString["OGRID"]);
                     ogrID.Text = id.ToString();
                     ogrAd.Text = dt.ogrenciGetir(id)[0].OGRAD;
@@ -38,9 +38,17 @@ namespace ogrenciYonetim
 
         protected void btnGuncelle_Click(object sender, EventArgs e)
         {
-            DataSet1TableAdapters.TBL_OGRENCITableAdapter dt = new DataSet1TableAdapters.TBL_OGRENCITableAdapter();
-            dt.ogrenciGuncelle(ogrAd.Text, ogrSoyad.Text, ogrTel.Text, ogrMail.Text, ogrSifre.Text, ogrFoto.Text, Convert.ToInt32( ogrID.Text));
-            Response.Redirect("Default.aspx");
+            
+            if (string.IsNullOrWhiteSpace(ogrAd.Text) || string.IsNullOrWhiteSpace(ogrSoyad.Text) || string.IsNullOrWhiteSpace(ogrTel.Text) || string.IsNullOrWhiteSpace(ogrMail.Text) || string.IsNullOrWhiteSpace(ogrSifre.Text))
+            {
+                Label1.Visible = true;
+            }
+            else
+            {
+                dt.ogrenciGuncelle(ogrAd.Text, ogrSoyad.Text, ogrTel.Text, ogrMail.Text, ogrSifre.Text, ogrFoto.Text, Convert.ToInt32(ogrID.Text));
+                Response.Redirect("Default.aspx");
+            }
+           
         }
     }
 }
