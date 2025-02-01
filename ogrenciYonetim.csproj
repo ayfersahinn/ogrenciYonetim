@@ -450,6 +450,7 @@
     <Content Include="duyuruSil.aspx" />
     <Content Include="duyuruGuncelle.aspx" />
     <Content Include="notListesi.aspx" />
+    <Content Include="notGuncelle.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSet1.Designer.cs">
@@ -527,6 +528,13 @@
     </Compile>
     <Compile Include="notListesi.aspx.designer.cs">
       <DependentUpon>notListesi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="notGuncelle.aspx.cs">
+      <DependentUpon>notGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notGuncelle.aspx.designer.cs">
+      <DependentUpon>notGuncelle.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

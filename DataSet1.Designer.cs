@@ -1373,6 +1373,8 @@ namespace ogrenciYonetim {
             
             private global::System.Data.DataColumn columnDURUM;
             
+            private global::System.Data.DataColumn columnNOTID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OgrNotlarDataTable() {
@@ -1472,6 +1474,14 @@ namespace ogrenciYonetim {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NOTIDColumn {
+                get {
+                    return this.columnNOTID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1507,7 +1517,7 @@ namespace ogrenciYonetim {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OgrNotlarRow AddOgrNotlarRow(int OGRID, string OGRENCIADSOYAD, string DERSAD, byte SINAV1, byte SINAV2, byte SINAV3, decimal ORT, bool DURUM) {
+            public OgrNotlarRow AddOgrNotlarRow(int OGRID, string OGRENCIADSOYAD, string DERSAD, byte SINAV1, byte SINAV2, byte SINAV3, decimal ORT, bool DURUM, int NOTID) {
                 OgrNotlarRow rowOgrNotlarRow = ((OgrNotlarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OGRID,
@@ -1517,7 +1527,8 @@ namespace ogrenciYonetim {
                         SINAV2,
                         SINAV3,
                         ORT,
-                        DURUM};
+                        DURUM,
+                        NOTID};
                 rowOgrNotlarRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOgrNotlarRow);
                 return rowOgrNotlarRow;
@@ -1548,6 +1559,7 @@ namespace ogrenciYonetim {
                 this.columnSINAV3 = base.Columns["SINAV3"];
                 this.columnORT = base.Columns["ORT"];
                 this.columnDURUM = base.Columns["DURUM"];
+                this.columnNOTID = base.Columns["NOTID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1569,10 +1581,13 @@ namespace ogrenciYonetim {
                 base.Columns.Add(this.columnORT);
                 this.columnDURUM = new global::System.Data.DataColumn("DURUM", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDURUM);
+                this.columnNOTID = new global::System.Data.DataColumn("NOTID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOTID);
                 this.columnOGRID.AllowDBNull = false;
                 this.columnOGRENCIADSOYAD.ReadOnly = true;
                 this.columnOGRENCIADSOYAD.MaxLength = 61;
                 this.columnDERSAD.MaxLength = 50;
+                this.columnNOTID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2269,6 +2284,17 @@ namespace ogrenciYonetim {
                 }
                 set {
                     this[this.tableOgrNotlar.DURUMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int NOTID {
+                get {
+                    return ((int)(this[this.tableOgrNotlar.NOTIDColumn]));
+                }
+                set {
+                    this[this.tableOgrNotlar.NOTIDColumn] = value;
                 }
             }
             
@@ -3981,6 +4007,7 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("SINAV3", "SINAV3");
             tableMapping.ColumnMappings.Add("ORT", "ORT");
             tableMapping.ColumnMappings.Add("DURUM", "DURUM");
+            tableMapping.ColumnMappings.Add("NOTID", "NOTID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -3994,12 +4021,29 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.OgrNotlar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"select NOTID,TBL_NOT.OGRID,(OGRAD+' '+ OGRSOYAD) AS 'OGRENCIADSOYAD' ,DERSAD, SINAV1, SINAV2, SINAV3, ORT, DURUM from TBL_NOT inner join TBL_OGRENCI on TBL_OGRENCI.OGRID = TBL_NOT.OGRID
+inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOTID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NOTID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "UPDATE TBL_NOT SET SINAV1=@SINAV1 ,SINAV2=@SINAV2 ,SINAV3=@SINAV3, ORT=@ORT, DURU" +
+                "M=@DURUM WHERE NOTID=@NOTID";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SINAV1", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "SINAV1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SINAV2", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "SINAV2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SINAV3", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "SINAV3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ORT", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 2, "ORT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DURUM", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "DURUM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOTID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NOTID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4024,6 +4068,86 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
             DataSet1.OgrNotlarDataTable dataTable = new DataSet1.OgrNotlarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int fillnotGetir2(DataSet1.OgrNotlarDataTable dataTable, int NOTID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NOTID));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet1.OgrNotlarDataTable notGetir2(int NOTID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NOTID));
+            DataSet1.OgrNotlarDataTable dataTable = new DataSet1.OgrNotlarDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int notGuncelle(global::System.Nullable<byte> SINAV1, global::System.Nullable<byte> SINAV2, global::System.Nullable<byte> SINAV3, global::System.Nullable<decimal> ORT, global::System.Nullable<bool> DURUM, int NOTID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((SINAV1.HasValue == true)) {
+                command.Parameters[0].Value = ((byte)(SINAV1.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((SINAV2.HasValue == true)) {
+                command.Parameters[1].Value = ((byte)(SINAV2.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((SINAV3.HasValue == true)) {
+                command.Parameters[2].Value = ((byte)(SINAV3.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((ORT.HasValue == true)) {
+                command.Parameters[3].Value = ((decimal)(ORT.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((DURUM.HasValue == true)) {
+                command.Parameters[4].Value = ((bool)(DURUM.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[5].Value = ((int)(NOTID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
