@@ -26,7 +26,9 @@
                 </tr>
             </ItemTemplate>
         </asp:Repeater>
-        <asp:HyperLink ID="HyperLink3" runat="server">HyperLink</asp:HyperLink>
+        
     </tbody>
 </table>
+    <br />
+    <asp:HyperLink ID="btnEkle" runat="server" NavigateUrl="~/dersEkle.aspx" CssClass="btn btn-primary">Ders Ekle</asp:HyperLink>
 </asp:Content>
