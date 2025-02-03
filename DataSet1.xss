@@ -10,7 +10,7 @@
     <Shape ID="DesignTable:TBL_DUYURU" ZOrder="6" X="507" Y="321" Height="273" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
     <Shape ID="DesignTable:TBL_OGRT" ZOrder="5" X="596" Y="72" Height="181" Width="240" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
     <Shape ID="DesignTable:OgrNotlar" ZOrder="3" X="1007" Y="256" Height="342" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="237" />
-    <Shape ID="DesignTable:TBL_DERS" ZOrder="2" X="899" Y="95" Height="181" Width="237" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
+    <Shape ID="DesignTable:TBL_DERS" ZOrder="2" X="899" Y="95" Height="227" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_TBL_DUYURU_TBL_OGRT" ZOrder="4" LineWidth="11">

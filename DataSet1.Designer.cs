@@ -4735,7 +4735,7 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT TBL_DERS.*\r\nFROM     TBL_DERS";
@@ -4747,9 +4747,25 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DERSAD", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "DERSAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT COUNT(*) FROM TBL_DERS WHERE DERSAD=@DERSAD";
+            this._commandCollection[2].CommandText = "UPDATE [TBL_DERS] SET [DERSAD] = @DERSAD WHERE (([DERSID] = @Original_DERSID))";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DERSAD", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "DERSAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DERSID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DERSID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT COUNT(*) FROM TBL_DERS WHERE DERSAD=@DERSAD";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DERSAD", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "DERSAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "DELETE FROM [TBL_DERS] WHERE (([DERSID] = @Original_DERSID))";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DERSID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DERSID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT DERSAD\r\nFROM     TBL_DERS WHERE DERSID=@DERSID";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DERSID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DERSID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4771,6 +4787,32 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSet1.TBL_DERSDataTable dersListesi() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSet1.TBL_DERSDataTable dataTable = new DataSet1.TBL_DERSDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByDersGetir(DataSet1.TBL_DERSDataTable dataTable, int DERSID) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(DERSID));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet1.TBL_DERSDataTable dersGetir(int DERSID) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(DERSID));
             DataSet1.TBL_DERSDataTable dataTable = new DataSet1.TBL_DERSDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4914,8 +4956,38 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> dersSayisi(string DERSAD) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int dersGuncelle(string DERSAD, int Original_DERSID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((DERSAD == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(DERSAD));
+            }
+            command.Parameters[1].Value = ((int)(Original_DERSID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> dersSayisi(string DERSAD) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((DERSAD == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4943,6 +5015,30 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
             else {
                 return new global::System.Nullable<int>(((int)(returnValue)));
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int dersSil(int Original_DERSID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            command.Parameters[0].Value = ((int)(Original_DERSID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
