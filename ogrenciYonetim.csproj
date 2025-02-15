@@ -457,6 +457,8 @@
     <Content Include="dersSil.aspx" />
     <Content Include="dersGuncelle.aspx" />
     <Content Include="grafikler.aspx" />
+    <Content Include="gelenMesaj.aspx" />
+    <Content Include="gidenMesaj.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSet1.Designer.cs">
@@ -576,6 +578,20 @@
     </Compile>
     <Compile Include="grafikler.aspx.designer.cs">
       <DependentUpon>grafikler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gelenMesaj.aspx.cs">
+      <DependentUpon>gelenMesaj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gelenMesaj.aspx.designer.cs">
+      <DependentUpon>gelenMesaj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gidenMesaj.aspx.cs">
+      <DependentUpon>gidenMesaj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gidenMesaj.aspx.designer.cs">
+      <DependentUpon>gidenMesaj.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

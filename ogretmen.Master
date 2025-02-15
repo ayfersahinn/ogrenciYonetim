@@ -68,13 +68,20 @@
                     </a>
 
                 </li>
-                <li>
+                <li class="active">
 
-                    <a href="#">
+                    <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-comments"></i>
-                        Mesajlar 
-                       
+                        Mesajlar
                     </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu3">
+                        <li>
+                            <a href="gelenMesaj.aspx"><i class="fas fa-envelope"></i> Gelen Mesajlar</a>
+                        </li>
+                        <li>
+                            <a href="gidenMesaj.aspx"><i class="fas fa-reply-all"></i> Giden Mesajlar</a>
+                        </li>
+                    </ul>
 
                 </li>
                 <li class="active">
@@ -85,10 +92,10 @@
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu2">
                         <li>
-                            <a href="duyuruListesi.aspx">Duyuru Listele</a>
+                            <a href="duyuruListesi.aspx"><i class="fas fa-list"></i> Duyuru Listele</a>
                         </li>
                         <li>
-                            <a href="duyuruEkle.aspx">Duyuru Ekle</a>
+                            <a href="duyuruEkle.aspx"><i class="fas fa-plus"></i> Duyuru Ekle</a>
                         </li>
                         
                        
