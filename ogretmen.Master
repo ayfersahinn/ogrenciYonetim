@@ -81,6 +81,9 @@
                         <li>
                             <a href="gidenMesaj.aspx"><i class="fas fa-reply-all"></i> Giden Mesajlar</a>
                         </li>
+                        <li>
+                            <a href="mesajOlustur.aspx"><i class="fas fa-comment-dots"></i> Mesaj Oluştur</a>
+                        </li>
                     </ul>
 
                 </li>

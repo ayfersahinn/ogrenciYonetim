@@ -459,6 +459,7 @@
     <Content Include="grafikler.aspx" />
     <Content Include="gelenMesaj.aspx" />
     <Content Include="gidenMesaj.aspx" />
+    <Content Include="mesajOlustur.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSet1.Designer.cs">
@@ -592,6 +593,13 @@
     </Compile>
     <Compile Include="gidenMesaj.aspx.designer.cs">
       <DependentUpon>gidenMesaj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mesajOlustur.aspx.cs">
+      <DependentUpon>mesajOlustur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mesajOlustur.aspx.designer.cs">
+      <DependentUpon>mesajOlustur.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
