@@ -460,6 +460,7 @@
     <Content Include="gelenMesaj.aspx" />
     <Content Include="gidenMesaj.aspx" />
     <Content Include="mesajOlustur.aspx" />
+    <Content Include="istatistikler.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSet1.Designer.cs">
@@ -600,6 +601,13 @@
     </Compile>
     <Compile Include="mesajOlustur.aspx.designer.cs">
       <DependentUpon>mesajOlustur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="istatistikler.aspx.cs">
+      <DependentUpon>istatistikler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="istatistikler.aspx.designer.cs">
+      <DependentUpon>istatistikler.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

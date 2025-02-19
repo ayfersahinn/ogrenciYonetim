@@ -502,6 +502,97 @@ VALUES (@GONDEREN,@ALICI,@BASLIK,@ICERIK)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ogrenciYonetimConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="istatistikler" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="istatistikler" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="istatistikler" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+FROM     TBL_OGRENCI</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources>
+              <DbSource ConnectionRef="ogrenciYonetimConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ist1" Modifier="Public" Name="ist1" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ist1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) AS Expr1
+FROM     TBL_OGRENCI</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ogrenciYonetimConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ist2" Modifier="Public" Name="ist2" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ist2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) FROM TBL_OGRT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ogrenciYonetimConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ist3" Modifier="Public" Name="ist3" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ist3">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) FROM     TBL_DERS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ogrenciYonetimConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ist4" Modifier="Public" Name="ist4" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ist4">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TBL_OGRENCI.OGRAD + ' ' + TBL_OGRENCI.OGRSOYAD AS Expr1
+FROM     TBL_OGRENCI INNER JOIN
+                  TBL_NOT ON TBL_NOT.OGRID = TBL_OGRENCI.OGRID
+WHERE  (TBL_NOT.SINAV1 =
+                      (SELECT MAX(sınav1) AS Expr1
+                       FROM      TBL_NOT AS TBL_NOT_1
+                       WHERE   (DERSID = 2)))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ogrenciYonetimConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ist5" Modifier="Public" Name="ist5" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="ist5">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select (OGRAD+' '+ OGRSOYAD) from TBL_OGRENCI inner join TBL_NOT on TBL_NOT.OGRID = TBL_OGRENCI.OGRID where SINAV1 = (select max(sınav1) from TBL_NOT where DERSID=6)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ogrenciYonetimConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ist6" Modifier="Public" Name="ist6" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="ist6">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AVG(SINAV1) AS Expr1
+FROM     TBL_NOT
+WHERE  (DERSID = 2)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ogrenciYonetimConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ist7" Modifier="Public" Name="ist7" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="ist7">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) AS Expr1
+FROM     TBL_NOT
+WHERE  (DURUM = 1) AND (DERSID = 2)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ogrenciYonetimConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ist8" Modifier="Public" Name="ist8" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="ist8">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select count(*) from TBL_NOT WHERE DURUM=0 and DERSID=6</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -679,6 +770,10 @@ VALUES (@GONDEREN,@ALICI,@BASLIK,@ICERIK)</CommandText>
               </xs:element>
               <xs:element name="TARIH" msprop:Generator_UserColumnName="TARIH" msprop:Generator_ColumnPropNameInTable="TARIHColumn" msprop:Generator_ColumnPropNameInRow="TARIH" msprop:Generator_ColumnVarNameInTable="columnTARIH" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
           </xs:complexType>
         </xs:element>
       </xs:choice>
