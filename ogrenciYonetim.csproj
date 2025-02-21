@@ -443,6 +443,7 @@
     <Content Include="Dosyalar1\teacher.png" />
     <Content Include="login.aspx" />
     <Content Include="StyleSheet.css" />
+    <Content Include="StyleSheet2.css" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
     <Content Include="ogrenciEkle.aspx" />
@@ -463,6 +464,7 @@
     <Content Include="gidenMesaj.aspx" />
     <Content Include="mesajOlustur.aspx" />
     <Content Include="istatistikler.aspx" />
+    <Content Include="ogrenciDefault.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSet1.Designer.cs">
@@ -476,6 +478,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenci.Master.cs">
+      <DependentUpon>ogrenci.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenci.Master.designer.cs">
+      <DependentUpon>ogrenci.Master</DependentUpon>
     </Compile>
     <Compile Include="ogretmen.Master.cs">
       <DependentUpon>ogretmen.Master</DependentUpon>
@@ -618,6 +627,13 @@
     <Compile Include="istatistikler.aspx.designer.cs">
       <DependentUpon>istatistikler.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ogrenciDefault.aspx.cs">
+      <DependentUpon>ogrenciDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenciDefault.aspx.designer.cs">
+      <DependentUpon>ogrenciDefault.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ogretmen.Master" />
@@ -727,6 +743,7 @@
     <Content Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
+    <Content Include="ogrenci.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
