@@ -24,22 +24,22 @@ namespace ogrenciYonetim
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// ogrAd control.
+        /// ogrNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ogrAd;
+        protected global::System.Web.UI.WebControls.TextBox ogrNo;
 
         /// <summary>
-        /// ogrSoyad control.
+        /// ogrAdSoyad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ogrSoyad;
+        protected global::System.Web.UI.WebControls.TextBox ogrAdSoyad;
 
         /// <summary>
         /// ogrTel control.
@@ -67,15 +67,6 @@ namespace ogrenciYonetim
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ogrSifre;
-
-        /// <summary>
-        /// TextBox1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
         /// ogrFoto control.

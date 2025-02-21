@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="width:700px; margin:auto;" >
+        <div style="width:700px; margin:auto;" class="text-center" >
             <br />
             <h3 class="text-center">Öğrenci Yönetim Kullanıcı Girişi</h3>
             
@@ -17,17 +17,21 @@
             <div class="m-auto text-center">
             <asp:Image ID="Image1" runat="server" ImageUrl="Dosyalar1/teacher.png" Width="200px" Height="200px" />
             </div>
-            <div>
+            <div class="text-left">
                 <asp:Label for="txtNumara" runat="server" Text="Label">Kullanıcı Adı</asp:Label>
                 <asp:TextBox ID="txtNumara" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <br />
-            <div>
+            <div class="text-left">
                 <asp:Label for="txtSifre" runat="server" Text="Label">Şifre</asp:Label>
                 <asp:TextBox ID="txtSifre" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             </div>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Giriş Yap" CssClass="btn btn-primary" Width="700" />
+           
+            <asp:Button ID="Button1" runat="server" Text="Giriş Yap" CssClass="btn btn-primary" Width="700" OnClick="Button1_Click" />
+            <br />
+            <br />
+             <asp:Label ID="Label1" runat="server" Text="Hatalı giriş yaptınız." CssClass="text-danger"  Visible="False"></asp:Label>
         </div>
     </form>
 </body>
