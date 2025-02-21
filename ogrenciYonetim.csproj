@@ -440,6 +440,8 @@
     <Content Include="Dosyalar1\sidebar\style4.css" />
     <Content Include="Dosyalar1\sidebar\style5.css" />
     <Content Include="Dosyalar1\StyleSheet2.css" />
+    <Content Include="Dosyalar1\teacher.png" />
+    <Content Include="login.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
@@ -467,6 +469,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="ogretmen.Master.cs">
       <DependentUpon>ogretmen.Master</DependentUpon>

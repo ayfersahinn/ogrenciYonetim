@@ -123,12 +123,7 @@
                         Grafikler
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-image"></i>
-                        Galeri
-                    </a>
-                </li>
+               
                 <li>
                     <a href="#">
                         <i class="fas fa-toolbox"></i>
