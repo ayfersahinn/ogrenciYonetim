@@ -465,6 +465,7 @@
     <Content Include="mesajOlustur.aspx" />
     <Content Include="istatistikler.aspx" />
     <Content Include="ogrenciDefault.aspx" />
+    <Content Include="ogrPanelGuncelleme.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSet1.Designer.cs">
@@ -633,6 +634,13 @@
     </Compile>
     <Compile Include="ogrenciDefault.aspx.designer.cs">
       <DependentUpon>ogrenciDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogrPanelGuncelleme.aspx.cs">
+      <DependentUpon>ogrPanelGuncelleme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrPanelGuncelleme.aspx.designer.cs">
+      <DependentUpon>ogrPanelGuncelleme.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

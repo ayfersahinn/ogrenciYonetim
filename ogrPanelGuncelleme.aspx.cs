@@ -7,28 +7,36 @@ using System.Web.UI.WebControls;
 
 namespace ogrenciYonetim
 {
-    public partial class ogrenciDefault : System.Web.UI.Page
+    public partial class ogrPanelGuncelleme : System.Web.UI.Page
     {
+        DataSet1TableAdapters.TBL_OGRENCITableAdapter dt = new DataSet1TableAdapters.TBL_OGRENCITableAdapter();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 ogrNo.Text = Request.QueryString["OGRNO"];
 
-                DataSet1TableAdapters.TBL_OGRENCITableAdapter dt = new DataSet1TableAdapters.TBL_OGRENCITableAdapter();
+
                 ogrAdSoyad.Text = dt.ogrenciPaneli(ogrNo.Text)[0].OGRAD + " " + dt.ogrenciPaneli(ogrNo.Text)[0].OGRSOYAD;
                 ogrTel.Text = dt.ogrenciPaneli(ogrNo.Text)[0].OGRTEL;
                 ogrMail.Text = dt.ogrenciPaneli(ogrNo.Text)[0].OGRMAIL;
                 ogrSifre.Text = dt.ogrenciPaneli(ogrNo.Text)[0].OGRSIFRE;
                 ogrFoto.Text = dt.ogrenciPaneli(ogrNo.Text)[0].OGRFOTO;
             }
-           
-
+            
         }
 
         protected void btnKaydet_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ogrPanelGuncelleme.aspx?OGRNO="+ogrNo.Text);
+            if(string.IsNullOrEmpty(ogrTel.Text) || string.IsNullOrEmpty(ogrMail.Text) || string.IsNullOrEmpty(ogrSifre.Text))
+            {
+                Label1.Visible = true;
+            }
+            else
+            {
+                dt.ogrPanelGuncelle(ogrTel.Text, ogrMail.Text, ogrSifre.Text, ogrNo.Text);
+                Response.Redirect("ogrenciDefault.aspx?OGRNO="+ogrNo.Text);
+            }
         }
     }
 }
