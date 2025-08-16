@@ -13,7 +13,7 @@ namespace ogrenciYonetim
         {
             if (!IsPostBack)
             {
-                ogrNo.Text = Request.QueryString["OGRNO"];
+                ogrNo.Text = Session["OGRNO"].ToString();
 
                 DataSet1TableAdapters.TBL_OGRENCITableAdapter dt = new DataSet1TableAdapters.TBL_OGRENCITableAdapter();
                 ogrAdSoyad.Text = dt.ogrenciPaneli(ogrNo.Text)[0].OGRAD + " " + dt.ogrenciPaneli(ogrNo.Text)[0].OGRSOYAD;

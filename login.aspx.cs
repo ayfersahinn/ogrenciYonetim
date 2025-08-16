@@ -19,6 +19,7 @@ namespace ogrenciYonetim
         {
             int varMi = Convert.ToInt32( dt.ogrenciGiris(txtNumara.Text, txtSifre.Text));
             if (varMi>0){
+                Session.Add("OGRNO",txtNumara.Text);
                 Response.Redirect("ogrenciDefault.aspx?OGRNO=" + txtNumara.Text);
 
             }
