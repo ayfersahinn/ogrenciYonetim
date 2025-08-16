@@ -36,7 +36,7 @@
             <ul class="list-unstyled components">
                
                 <li>
-                    <a href="dersListesi.aspx">
+                    <a href="ogrenciDefault.aspx">
                         <i class="fas fa-home"></i>
                         Profil
                     </a>
@@ -67,7 +67,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="notListesi.aspx">
+                    <a href="ogrenciNot.aspx">
                         <i class="fas fa-clipboard"></i>
                         Sınav Notları
                     </a>
