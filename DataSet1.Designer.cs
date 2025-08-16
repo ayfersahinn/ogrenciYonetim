@@ -4076,11 +4076,13 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "INSERT INTO [TBL_OGRENCI] ([OGRAD], [OGRSOYAD], [OGRTEL], [OGRMAIL], [OGRSIFRE], " +
-                "[OGRFOTO]) VALUES (@OGRAD, @OGRSOYAD, @OGRTEL, @OGRMAIL, @OGRSIFRE, @OGRFOTO)";
+            this._commandCollection[3].CommandText = "INSERT INTO [TBL_OGRENCI] ([OGRAD], [OGRSOYAD], [OGRNO], [OGRTEL], [OGRMAIL], [OG" +
+                "RSIFRE], [OGRFOTO]) VALUES (@OGRAD, @OGRSOYAD, @OGRNO, @OGRTEL, @OGRMAIL, @OGRSI" +
+                "FRE, @OGRFOTO)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRSOYAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRSOYAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRNO", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRNO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTEL", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRMAIL", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRMAIL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRSIFRE", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OGRSIFRE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4093,12 +4095,13 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRSIFRE", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OGRSIFRE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "UPDATE [TBL_OGRENCI] SET [OGRAD] = @OGRAD, [OGRSOYAD] = @OGRSOYAD, [OGRTEL] = @OG" +
-                "RTEL, [OGRMAIL] = @OGRMAIL, [OGRSIFRE] = @OGRSIFRE, [OGRFOTO] = @OGRFOTO WHERE (" +
-                "([OGRID] = @OGRID))";
+            this._commandCollection[5].CommandText = "UPDATE [TBL_OGRENCI] SET [OGRAD] = @OGRAD, [OGRSOYAD] = @OGRSOYAD,  [OGRNO]=@OGRN" +
+                "O, [OGRTEL] = @OGRTEL, [OGRMAIL] = @OGRMAIL, [OGRSIFRE] = @OGRSIFRE, [OGRFOTO] =" +
+                " @OGRFOTO WHERE (([OGRID] = @OGRID))";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRSOYAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRSOYAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRNO", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRNO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTEL", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRMAIL", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRMAIL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRSIFRE", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OGRSIFRE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4381,7 +4384,7 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int ogrenciEkle(string OGRAD, string OGRSOYAD, string OGRTEL, string OGRMAIL, string OGRSIFRE, string OGRFOTO) {
+        public virtual int ogrenciEkle(string OGRAD, string OGRSOYAD, string OGRNO, string OGRTEL, string OGRMAIL, string OGRSIFRE, string OGRFOTO) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((OGRAD == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -4395,29 +4398,35 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
             else {
                 command.Parameters[1].Value = ((string)(OGRSOYAD));
             }
-            if ((OGRTEL == null)) {
+            if ((OGRNO == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(OGRTEL));
+                command.Parameters[2].Value = ((string)(OGRNO));
             }
-            if ((OGRMAIL == null)) {
+            if ((OGRTEL == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(OGRMAIL));
+                command.Parameters[3].Value = ((string)(OGRTEL));
             }
-            if ((OGRSIFRE == null)) {
+            if ((OGRMAIL == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(OGRSIFRE));
+                command.Parameters[4].Value = ((string)(OGRMAIL));
             }
-            if ((OGRFOTO == null)) {
+            if ((OGRSIFRE == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = ((string)(OGRFOTO));
+                command.Parameters[5].Value = ((string)(OGRSIFRE));
+            }
+            if ((OGRFOTO == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(OGRFOTO));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4480,7 +4489,7 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int ogrenciGuncelle(string OGRAD, string OGRSOYAD, string OGRTEL, string OGRMAIL, string OGRSIFRE, string OGRFOTO, int OGRID) {
+        public virtual int ogrenciGuncelle(string OGRAD, string OGRSOYAD, string OGRNO, string OGRTEL, string OGRMAIL, string OGRSIFRE, string OGRFOTO, int OGRID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
             if ((OGRAD == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -4494,31 +4503,37 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
             else {
                 command.Parameters[1].Value = ((string)(OGRSOYAD));
             }
-            if ((OGRTEL == null)) {
+            if ((OGRNO == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(OGRTEL));
+                command.Parameters[2].Value = ((string)(OGRNO));
             }
-            if ((OGRMAIL == null)) {
+            if ((OGRTEL == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(OGRMAIL));
+                command.Parameters[3].Value = ((string)(OGRTEL));
             }
-            if ((OGRSIFRE == null)) {
+            if ((OGRMAIL == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(OGRSIFRE));
+                command.Parameters[4].Value = ((string)(OGRMAIL));
             }
-            if ((OGRFOTO == null)) {
+            if ((OGRSIFRE == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = ((string)(OGRFOTO));
+                command.Parameters[5].Value = ((string)(OGRSIFRE));
             }
-            command.Parameters[6].Value = ((int)(OGRID));
+            if ((OGRFOTO == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(OGRFOTO));
+            }
+            command.Parameters[7].Value = ((int)(OGRID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

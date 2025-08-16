@@ -19,6 +19,7 @@ namespace ogrenciYonetim
                     
                     int id = Convert.ToInt32(Request.QueryString["OGRID"]);
                     ogrID.Text = id.ToString();
+                    ogrNo.Text = dt.ogrenciGetir(id)[0].OGRNO;
                     ogrAd.Text = dt.ogrenciGetir(id)[0].OGRAD;
                     ogrSoyad.Text = dt.ogrenciGetir(id)[0].OGRSOYAD;
                     ogrTel.Text = dt.ogrenciGetir(id)[0].OGRTEL;
@@ -39,13 +40,13 @@ namespace ogrenciYonetim
         protected void btnGuncelle_Click(object sender, EventArgs e)
         {
             
-            if (string.IsNullOrWhiteSpace(ogrAd.Text) || string.IsNullOrWhiteSpace(ogrSoyad.Text) || string.IsNullOrWhiteSpace(ogrTel.Text) || string.IsNullOrWhiteSpace(ogrMail.Text) || string.IsNullOrWhiteSpace(ogrSifre.Text))
+            if (string.IsNullOrWhiteSpace(ogrAd.Text) || string.IsNullOrWhiteSpace(ogrNo.Text) || string.IsNullOrWhiteSpace(ogrSoyad.Text) || string.IsNullOrWhiteSpace(ogrTel.Text) || string.IsNullOrWhiteSpace(ogrMail.Text) || string.IsNullOrWhiteSpace(ogrSifre.Text))
             {
                 Label1.Visible = true;
             }
             else
             {
-                dt.ogrenciGuncelle(ogrAd.Text, ogrSoyad.Text, ogrTel.Text, ogrMail.Text, ogrSifre.Text, ogrFoto.Text, Convert.ToInt32(ogrID.Text));
+                dt.ogrenciGuncelle(ogrAd.Text, ogrSoyad.Text,ogrNo.Text, ogrTel.Text, ogrMail.Text, ogrSifre.Text, ogrFoto.Text, Convert.ToInt32(ogrID.Text));
                 Response.Redirect("Default.aspx");
             }
            

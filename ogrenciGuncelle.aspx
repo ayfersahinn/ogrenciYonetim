@@ -10,6 +10,8 @@
              <asp:Label ID="Label1" runat="server" role="alert"  style="display: block;" CssClass="alert alert-danger d-block" Text="Tüm alanları eksiksiz şekilde doldurunuz." Visible="False"></asp:Label>
             <asp:TextBox ID="ogrID" runat="server" CssClass="form-control" placeholder="Öğrenci ID" Enabled="False"></asp:TextBox>
             <br />
+            <asp:TextBox ID="ogrNo" runat="server" CssClass="form-control" placeholder="Öğrenci No"> </asp:TextBox>
+<br />
             <asp:TextBox ID="ogrAd" runat="server" CssClass="form-control" placeholder="Öğrenci Adı"> </asp:TextBox>
             <br />
             <asp:TextBox ID="ogrSoyad" runat="server" CssClass="form-control" placeholder="Öğrenci Soyadı"> </asp:TextBox>
