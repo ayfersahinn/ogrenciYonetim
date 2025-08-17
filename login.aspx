@@ -20,12 +20,12 @@
             
             <br />
             <div class="m-auto text-center">
-            <asp:Image ID="Image1" runat="server" ImageUrl="Dosyalar1/teacher.png" Width="200px" Height="200px" />
+            <asp:Image ID="Image1" runat="server" ImageUrl="Dosyalar1/students.png" Width="200px" Height="200px" />
             </div>
             <div style="margin: 50px 0">
 
-            <asp:Button ID="ogrtClick" runat="server" Text="Öğretmen" CssClass="btn btn-info " Width="332px" style="margin-right:30px; " OnClick="ogrtClick_Click"/>
-            <asp:Button ID="ogrenciclick" runat="server" Text="Öğrenci" CssClass="btn btn-default " Width="332px" OnClick="ogrenciclick_Click"/>
+            <asp:Button ID="ogrtClick" runat="server" Text="Öğretmen" CssClass="btn btn-default "  Width="332px" style="margin-right:30px; " OnClick="ogrtClick_Click"/>
+            <asp:Button ID="ogrenciclick" runat="server" Text="Öğrenci"  Width="332px" CssClass="btn btn-info " OnClick="ogrenciclick_Click"/>
             </div>
             <div class="text-left">
                 <strong>

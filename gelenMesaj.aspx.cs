@@ -12,7 +12,7 @@ namespace ogrenciYonetim
         protected void Page_Load(object sender, EventArgs e)
         {
             DataSet1TableAdapters.TBL_MESAJTableAdapter dt = new DataSet1TableAdapters.TBL_MESAJTableAdapter();
-            Repeater1.DataSource = dt.ogretmenGelenMesajlar();
+            Repeater1.DataSource = dt.ogretmenGelenMesajlar(Session["OGRETMEN_NO"].ToString());
             Repeater1.DataBind();
         }
     }

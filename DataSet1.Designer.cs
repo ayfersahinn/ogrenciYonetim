@@ -6303,8 +6303,9 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT MESAJID, GONDEREN, ALICI, BASLIK, ICERIK, TARIH\r\nFROM     TBL_MESAJ\r\nWHERE" +
-                "  ALICI = \'1111\'";
+                "  ALICI = @ALICI";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ALICI", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "ALICI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT TBL_MESAJ.ALICI, TBL_MESAJ.BASLIK, TBL_MESAJ.GONDEREN, TBL_MESAJ.ICERIK, T" +
@@ -6315,9 +6316,10 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT TBL_MESAJ.ALICI, TBL_MESAJ.BASLIK, TBL_MESAJ.GONDEREN, TBL_MESAJ.ICERIK, T" +
-                "BL_MESAJ.MESAJID, TBL_MESAJ.TARIH FROM TBL_MESAJ INNER JOIN TBL_OGRENCI ON TBL_M" +
-                "ESAJ.ALICI = TBL_OGRENCI.OGRNO WHERE (TBL_MESAJ.GONDEREN = 1111\')";
+                "BL_MESAJ.MESAJID, TBL_MESAJ.TARIH FROM TBL_MESAJ INNER JOIN TBL_OGRT ON TBL_MESA" +
+                "J.ALICI = TBL_OGRT.OGRTNO WHERE (TBL_MESAJ.GONDEREN = @GONDEREN)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GONDEREN", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "GONDEREN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT TBL_MESAJ.ALICI, TBL_MESAJ.BASLIK, TBL_MESAJ.GONDEREN, TBL_MESAJ.ICERIK, T" +
@@ -6340,8 +6342,14 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillGelenMesaj(DataSet1.TBL_MESAJDataTable dataTable) {
+        public virtual int FillGelenMesaj(DataSet1.TBL_MESAJDataTable dataTable, string ALICI) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ALICI == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(ALICI));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6353,8 +6361,14 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.TBL_MESAJDataTable ogretmenGelenMesajlar() {
+        public virtual DataSet1.TBL_MESAJDataTable ogretmenGelenMesajlar(string ALICI) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ALICI == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(ALICI));
+            }
             DataSet1.TBL_MESAJDataTable dataTable = new DataSet1.TBL_MESAJDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6400,8 +6414,14 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByogretmenGiden(DataSet1.TBL_MESAJDataTable dataTable) {
+        public virtual int FillByogretmenGiden(DataSet1.TBL_MESAJDataTable dataTable, string GONDEREN) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((GONDEREN == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(GONDEREN));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6413,8 +6433,14 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSet1.TBL_MESAJDataTable ogretmenGidenMesaj() {
+        public virtual DataSet1.TBL_MESAJDataTable ogretmenGidenMesaj(string GONDEREN) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((GONDEREN == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(GONDEREN));
+            }
             DataSet1.TBL_MESAJDataTable dataTable = new DataSet1.TBL_MESAJDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
