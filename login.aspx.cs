@@ -10,6 +10,7 @@ namespace ogrenciYonetim
     public partial class login : System.Web.UI.Page
     {
         DataSet1TableAdapters.TBL_OGRENCITableAdapter dt = new DataSet1TableAdapters.TBL_OGRENCITableAdapter();
+       
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -27,6 +28,18 @@ namespace ogrenciYonetim
             {
                 Label1.Visible = true;
             }
+        }
+
+        protected void ogrtClick_Click(object sender, EventArgs e)
+        {
+                Response.Redirect("ogrtLogin.aspx");
+
+        }
+
+        protected void ogrenciclick_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+
         }
     }
 }

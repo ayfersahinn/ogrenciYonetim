@@ -11,7 +11,7 @@ namespace ogrenciYonetim
 {
 
 
-    public partial class login
+    public partial class ogrtLogin
     {
 
         /// <summary>

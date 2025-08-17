@@ -442,6 +442,7 @@
     <Content Include="Dosyalar1\StyleSheet2.css" />
     <Content Include="Dosyalar1\teacher.png" />
     <Content Include="login.aspx" />
+    <Content Include="ogrtLogin.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="StyleSheet2.css" />
     <Content Include="Web.config" />
@@ -501,6 +502,13 @@
     </Compile>
     <Compile Include="ogretmen.Master.designer.cs">
       <DependentUpon>ogretmen.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ogrtLogin.aspx.cs">
+      <DependentUpon>ogrtLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrtLogin.aspx.designer.cs">
+      <DependentUpon>ogrtLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Default.aspx.cs">

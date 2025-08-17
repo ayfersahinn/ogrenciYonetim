@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="ogrenciYonetim.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ogrtLogin.aspx.cs" Inherits="ogrenciYonetim.ogrtLogin" %>
 
 <!DOCTYPE html>
 
@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
         <div style="width:700px; margin:auto;" class="text-center" >
             <br />
-            <h2 class="text-center text-bold" style="color:#286090; font-weight:bolder">Öğrenci Yönetim Sistemi Öğrenci Giriş</h2>
+            <h2 class="text-center text-bold" style="color:#286090; font-weight:bolder">Öğrenci Yönetim Sistemi Öğretmen Giriş </h2>
             
             <br />
             <div class="m-auto text-center">

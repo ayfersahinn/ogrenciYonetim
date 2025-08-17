@@ -41,7 +41,7 @@
                         Profil
                     </a>
                 </li>
-                <li class="active">
+                <li >
 
                     <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-comments"></i>
