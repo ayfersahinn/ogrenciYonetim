@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ogretmen.Master" AutoEventWireup="true" CodeBehind="duyuruListesi.aspx.cs" Inherits="ogrenciYonetim.duyuruListesi" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ogrenci.Master" AutoEventWireup="true" CodeBehind="ogrenciDuyurular.aspx.cs" Inherits="ogrenciYonetim.ogrenciDuyurular" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover">
 
     <tr>
         <th scope="col">ID</th>
         <th scope="col">BAŞLIK</th>
         <th scope="col">İÇERİK</th>
         <th scope="col">ÖĞRETMEN</th>
-        <th scope="col">İŞLEMLER</th>
+        
 
     </tr>
 
@@ -22,10 +22,7 @@
                     <td><%# Eval("DUYURUICERIK") %></td>
                     <td><%# Eval("OGRTADSOYAD") %></td>
                     
-                    <td>
-                        <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "duyuruSil.aspx?DUYURUID=" + Eval("DUYURUID") %>' runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>
-                        <asp:HyperLink ID="HyperLink2" NavigateUrl='<%# "duyuruGuncelle.aspx?DUYURUID=" + Eval("DUYURUID") %>' runat="server" CssClass="btn btn-warning">Güncelle</asp:HyperLink>
-                    </td>
+                   
                 </tr>
             </ItemTemplate>
         </asp:Repeater>
