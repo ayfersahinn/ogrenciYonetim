@@ -7,8 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace ogrenciYonetim
 {
-    public partial class ogrenciGelenMesajlar : System.Web.UI.Page
+    public partial class ogrenciGelenMesajlar : BasePage
     {
+        public ogrenciGelenMesajlar()
+        {
+            RequiredRole = "Ogrenci";
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             
