@@ -72,10 +72,11 @@
                         Sınav Notları
                     </a>
                 </li>          
+               
                 <li>
-                    <a href="#">
-                        <i class="fas fa-toolbox"></i>
-                        Ayarlar
+                    <a href="logout.aspx">
+                        <i class="fas fa-chevron-right"></i>
+                        Çıkış Yap
                     </a>
                 </li>
             </ul>

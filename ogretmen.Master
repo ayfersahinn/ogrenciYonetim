@@ -11,9 +11,9 @@
 
     <title>Sınav Not Sistemi</title>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
-    <!-- Bootstrap CSS CDN -->
+  <!-- Our Custom CSS -->
     <link href="Dosyalar1/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Our Custom CSS -->
+    
     <%-- <link href="Dosyalar1/StyleSheet2.css" rel="stylesheet" />--%>
     <link href="StyleSheet.css" rel="stylesheet" />
     <!-- Font Awesome JS -->
@@ -128,6 +128,12 @@
                     <a href="#">
                         <i class="fas fa-toolbox"></i>
                         Ayarlar
+                    </a>
+                </li>
+                <li>
+                    <a href="logout.aspx">
+                        <i class="fas fa-chevron-right"></i>
+                        Çıkış Yap
                     </a>
                 </li>
             </ul>
