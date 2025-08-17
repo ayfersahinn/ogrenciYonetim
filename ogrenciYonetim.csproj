@@ -469,6 +469,7 @@
     <Content Include="ogrenciNot.aspx" />
     <Content Include="ogrenciGelenMesajlar.aspx" />
     <Content Include="ogrenciGidenMesajlar.aspx" />
+    <Content Include="ogrenciMesajOlustur.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSet1.cs">
@@ -668,6 +669,13 @@
     </Compile>
     <Compile Include="ogrenciGidenMesajlar.aspx.designer.cs">
       <DependentUpon>ogrenciGidenMesajlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenciMesajOlustur.aspx.cs">
+      <DependentUpon>ogrenciMesajOlustur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenciMesajOlustur.aspx.designer.cs">
+      <DependentUpon>ogrenciMesajOlustur.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
