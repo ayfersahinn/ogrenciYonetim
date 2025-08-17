@@ -7,8 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace ogrenciYonetim
 {
-    public partial class duyuruGuncelle : System.Web.UI.Page
+    public partial class duyuruGuncelle : BasePage
     {
+        public duyuruGuncelle()
+        {
+            RequiredRole = "Ogretmen";
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

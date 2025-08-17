@@ -7,8 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace ogrenciYonetim
 {
-    public partial class dersEkle : System.Web.UI.Page
+    public partial class dersEkle : BasePage
     {
+        public dersEkle()
+        {
+            RequiredRole = "Ogretmen";
+        }
         DataSet1TableAdapters.TBL_DERSTableAdapter dt = new DataSet1TableAdapters.TBL_DERSTableAdapter();
         protected void Page_Load(object sender, EventArgs e)
         {

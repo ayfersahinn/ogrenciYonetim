@@ -7,9 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace ogrenciYonetim
 {
-    public partial class notGuncelle : System.Web.UI.Page
+    public partial class notGuncelle : BasePage
     {
-        
+        public notGuncelle()
+        {
+            RequiredRole = "Ogretmen";
+        }
+
         DataSet1TableAdapters.OgrNotlarTableAdapter dt = new DataSet1TableAdapters.OgrNotlarTableAdapter();
         int nid;
         protected void Page_Load(object sender, EventArgs e)

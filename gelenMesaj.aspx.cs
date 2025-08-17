@@ -7,8 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace ogrenciYonetim
 {
-    public partial class gelenMesaj : System.Web.UI.Page
+    public partial class gelenMesaj : BasePage
     {
+        public gelenMesaj()
+        {
+            RequiredRole = "Ogretmen";
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             DataSet1TableAdapters.TBL_MESAJTableAdapter dt = new DataSet1TableAdapters.TBL_MESAJTableAdapter();

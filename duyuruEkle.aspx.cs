@@ -7,8 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace ogrenciYonetim
 {
-    public partial class duyuruEkle : System.Web.UI.Page
+    public partial class duyuruEkle : BasePage
     {
+        public duyuruEkle()
+        {
+            RequiredRole = "Ogretmen";
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             //öğretmenleri comboboxa atama

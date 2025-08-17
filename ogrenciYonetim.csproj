@@ -475,6 +475,9 @@
     <Content Include="ogrenciDuyurular.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="basePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>

@@ -9,8 +9,12 @@ using System.Data.SqlClient;
 
 namespace ogrenciYonetim
 {
-    public partial class grafikler : System.Web.UI.Page
+    public partial class grafikler : BasePage
     {
+        public grafikler()
+        {
+            RequiredRole = "Ogretmen";
+        }
         SqlConnection conn=new SqlConnection(@"Data Source=DESKTOP-5ANGUIR\SQLEXPRESS02;Initial Catalog=ogrenciYonetim;Integrated Security=True;Encrypt=False");
         protected void Page_Load(object sender, EventArgs e)
         {
