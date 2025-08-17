@@ -9,7 +9,7 @@
         <asp:Label ID="Label2" runat="server" role="alert" Style="display: block;" CssClass="alert alert-danger d-block" Text="Tüm alanları eksiksiz şekilde doldurunuz." Visible="False"></asp:Label>
 
         <br />
-        <asp:Label ID="Label1" runat="server" role="alert" Style="display: block;" CssClass="alert alert-danger d-block" Text="Bu isimde ders adı zaten mevcut. Yeni ders adı giriniz." Visible="False"></asp:Label>
+       <asp:TextBox ID="dersId" runat="server" CssClass="form-control" placeholder="Ders ID" Enabled="False"></asp:TextBox>
 
         <br />
 

@@ -15,6 +15,7 @@ namespace ogrenciYonetim
             if (!IsPostBack)
             {
                 int id = Convert.ToInt32(Request.QueryString["DERSID"]);
+                dersId.Text = id.ToString();
                 dersAd.Text = dt.dersGetir(id)[0].DERSAD;
             }
         }
@@ -23,22 +24,17 @@ namespace ogrenciYonetim
         {
             int id = Convert.ToInt32(Request.QueryString["DERSID"]);
             
-            int varMi = Convert.ToInt32(dt.dersSayisi(dersAd.Text));
+            
             if (string.IsNullOrWhiteSpace(dersAd.Text))
             {
                 Label2.Visible = true;
             }
             else
             {
-                if (varMi > 0)
-                {
-                    Label1.Visible = true;
-                }
-                else
-                {
-                    dt.dersGuncelle(dersAd.Text, id);
-                    Response.Redirect("dersListesi.aspx");
-                }
+        
+                dt.dersGuncelle(dersAd.Text, id);
+                Response.Redirect("dersListesi.aspx");
+                
             }
         }
     }
