@@ -22,7 +22,7 @@ namespace ogrenciYonetim
                 ogrSifre.Text = dt.ogrenciPaneli(ogrNo.Text)[0].OGRSIFRE;
                 ogrFoto.Text = dt.ogrenciPaneli(ogrNo.Text)[0].OGRFOTO;
             }
-           
+
 
         }
 

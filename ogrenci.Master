@@ -49,10 +49,10 @@
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu3">
                         <li>
-                            <a href="gelenMesaj.aspx"><i class="fas fa-envelope"></i> Gelen Mesajlar</a>
+                            <a href="ogrenciGelenMesajlar.aspx"><i class="fas fa-envelope"></i> Gelen Mesajlar</a>
                         </li>
                         <li>
-                            <a href="gidenMesaj.aspx"><i class="fas fa-reply-all"></i> Giden Mesajlar</a>
+                            <a href="ogrenciGidenMesajlar.aspx"><i class="fas fa-reply-all"></i> Giden Mesajlar</a>
                         </li>
                         <li>
                             <a href="mesajOlustur.aspx"><i class="fas fa-comment-dots"></i> Mesaj Oluştur</a>

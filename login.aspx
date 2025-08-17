@@ -6,24 +6,33 @@
 <head runat="server">
     <link href="Dosyalar1/bootstrap.min.css" rel="stylesheet" />
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            color: #0066FF;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div style="width:700px; margin:auto;" class="text-center" >
             <br />
-            <h3 class="text-center">Öğrenci Yönetim Kullanıcı Girişi</h3>
+            <h2 class="text-center text-bold" style="color:#286090; font-weight:bolder">Öğrenci Yönetim Sistemi </h2>
             
             <br />
             <div class="m-auto text-center">
             <asp:Image ID="Image1" runat="server" ImageUrl="Dosyalar1/teacher.png" Width="200px" Height="200px" />
             </div>
             <div class="text-left">
-                <asp:Label for="txtNumara" runat="server" Text="Label">Kullanıcı Adı</asp:Label>
+                <strong>
+                <asp:Label for="txtNumara" runat="server" Text="Label" CssClass="auto-style1">Kullanıcı Adı</asp:Label>
+                </strong>
                 <asp:TextBox ID="txtNumara" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <br />
             <div class="text-left">
-                <asp:Label for="txtSifre" runat="server" Text="Label">Şifre</asp:Label>
+                <strong>
+                <asp:Label for="txtSifre" runat="server" Text="Label" CssClass="auto-style1">Şifre</asp:Label>
+                </strong>
                 <asp:TextBox ID="txtSifre" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             </div>
             <br />

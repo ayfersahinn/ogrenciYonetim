@@ -467,8 +467,12 @@
     <Content Include="ogrenciDefault.aspx" />
     <Content Include="ogrPanelGuncelleme.aspx" />
     <Content Include="ogrenciNot.aspx" />
+    <Content Include="ogrenciGelenMesajlar.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -649,6 +653,13 @@
     </Compile>
     <Compile Include="ogrenciNot.aspx.designer.cs">
       <DependentUpon>ogrenciNot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenciGelenMesajlar.aspx.cs">
+      <DependentUpon>ogrenciGelenMesajlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenciGelenMesajlar.aspx.designer.cs">
+      <DependentUpon>ogrenciGelenMesajlar.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
