@@ -19,7 +19,7 @@
             <ItemTemplate>
                 <tr>
                    
-                    <td><%# Eval("ALICI_AD") %></td>
+                    <td><%# Eval("ALICI") %></td>
                     <td><%# Eval("BASLIK") %></td>
                     <td><%# Eval("ICERIK") %></td>
                     <td><%# Eval("TARIH") %></td>

@@ -7,7 +7,6 @@
     <tr>
         <th scope="col">ID</th>
         <th scope="col">ALICI</th>
-        <th scope="col">ALICI AD SOYAD</th>
         <th scope="col">BAŞLIK</th>
         <th scope="col">İÇERİK</th>
         <th scope="col">TARİH</th>
@@ -21,7 +20,6 @@
                 <tr>
                     <td><%# Eval("MESAJID") %></td>
                     <td><%# Eval("ALICI") %></td>
-                    <td><%# Eval("ALICI_AD_SOYAD") %></td>
                     <td><%# Eval("BASLIK") %></td>
                     <td><%# Eval("ICERIK") %></td>
                     <td><%# Eval("TARIH") %></td>

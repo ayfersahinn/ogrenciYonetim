@@ -7,8 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace ogrenciYonetim
 {
-    public partial class ogrenciMesajOlustur : System.Web.UI.Page
+    public partial class ogrenciMesajOlustur : BasePage
     {
+        public ogrenciMesajOlustur()
+        {
+            RequiredRole = "Ogrenci";
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             gonderen.Text = Session["OGRNO"].ToString();

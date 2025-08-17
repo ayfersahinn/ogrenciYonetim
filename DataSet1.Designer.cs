@@ -6308,23 +6308,20 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ALICI", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "ALICI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT TBL_MESAJ.ALICI, TBL_MESAJ.BASLIK, TBL_MESAJ.GONDEREN, TBL_MESAJ.ICERIK, T" +
-                "BL_MESAJ.MESAJID, TBL_MESAJ.TARIH FROM TBL_MESAJ INNER JOIN TBL_OGRENCI ON TBL_M" +
-                "ESAJ.ALICI = TBL_OGRENCI.OGRNO WHERE (TBL_MESAJ.GONDEREN = @GONDEREN)";
+            this._commandCollection[1].CommandText = "SELECT ALICI, BASLIK, GONDEREN, ICERIK, MESAJID, TARIH FROM TBL_MESAJ WHERE GONDE" +
+                "REN = @GONDEREN";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GONDEREN", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "GONDEREN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT TBL_MESAJ.ALICI, TBL_MESAJ.BASLIK, TBL_MESAJ.GONDEREN, TBL_MESAJ.ICERIK, T" +
-                "BL_MESAJ.MESAJID, TBL_MESAJ.TARIH FROM TBL_MESAJ INNER JOIN TBL_OGRT ON TBL_MESA" +
-                "J.ALICI = TBL_OGRT.OGRTNO WHERE (TBL_MESAJ.GONDEREN = @GONDEREN)";
+            this._commandCollection[2].CommandText = "SELECT ALICI, BASLIK, GONDEREN, ICERIK, MESAJID, TARIH FROM TBL_MESAJ WHERE GONDE" +
+                "REN=@GONDEREN";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GONDEREN", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "GONDEREN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT TBL_MESAJ.ALICI, TBL_MESAJ.BASLIK, TBL_MESAJ.GONDEREN, TBL_MESAJ.ICERIK, T" +
-                "BL_MESAJ.MESAJID, TBL_MESAJ.TARIH FROM TBL_MESAJ INNER JOIN TBL_OGRENCI ON TBL_M" +
-                "ESAJ.GONDEREN = TBL_OGRENCI.OGRNO WHERE (TBL_MESAJ.ALICI = @ALICI)";
+            this._commandCollection[3].CommandText = "SELECT ALICI, BASLIK, GONDEREN, ICERIK, MESAJID, TARIH FROM TBL_MESAJ WHERE ALICI" +
+                " = @ALICI";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ALICI", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "ALICI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();

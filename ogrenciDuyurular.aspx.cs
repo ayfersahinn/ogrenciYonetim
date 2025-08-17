@@ -7,8 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace ogrenciYonetim
 {
-    public partial class ogrenciDuyurular : System.Web.UI.Page
+    public partial class ogrenciDuyurular : BasePage
     {
+        public ogrenciDuyurular()
+        {
+            RequiredRole = "Ogrenci";
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             DataSet1TableAdapters.TBL_DUYURUTableAdapter dt = new DataSet1TableAdapters.TBL_DUYURUTableAdapter();
