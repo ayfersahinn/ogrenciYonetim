@@ -5292,7 +5292,7 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> ogrtVarMi(string OGRTNO) {
+        public virtual object ogrtVarMi(string OGRTNO) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((OGRTNO == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -5316,10 +5316,10 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
+                return null;
             }
             else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
+                return ((object)(returnValue));
             }
         }
     }

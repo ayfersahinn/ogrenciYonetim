@@ -22,8 +22,11 @@ namespace ogrenciYonetim
         protected void btn_mesaj_gonder_Click(object sender, EventArgs e)
         {
             DataSet1TableAdapters.TBL_OGRENCITableAdapter dt2 = new DataSet1TableAdapters.TBL_OGRENCITableAdapter();
-            int checkAlici = Convert.ToInt32(dt2.ogrVarMi( alici.Text));
-            if(checkAlici > 0)
+            DataSet1TableAdapters.TBL_OGRTTableAdapter dt3 = new DataSet1TableAdapters.TBL_OGRTTableAdapter();
+            int checkAlici = Convert.ToInt32(dt2.ogrVarMi(alici.Text));
+            int ogrtAlici = Convert.ToInt32(dt3.ogrtVarMi(alici.Text));
+
+            if (checkAlici > 0 || ogrtAlici > 0)
             {
                 dt.mesajOlustur(gonderen.Text, alici.Text, baslik.Text, icerik.Text);
                 Response.Redirect("gidenMesaj.aspx");
@@ -32,7 +35,8 @@ namespace ogrenciYonetim
             {
                 Label1.Visible = true;
             }
-            
-        }
+        
+
+    }
     }
 }
