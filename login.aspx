@@ -6,12 +6,7 @@
 <head runat="server">
     <link href="Dosyalar1/bootstrap.min.css" rel="stylesheet" />
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            color: #0066FF;
-        }
-    </style>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server" defaultbutton="Button1">
         <div style="width:700px; margin:auto;" class="text-center" >
@@ -22,28 +17,35 @@
             <div class="m-auto text-center">
             <asp:Image ID="Image1" runat="server" ImageUrl="Dosyalar1/img/students.png" Width="200px" Height="200px" />
             </div>
+            <br />
+            <br />
             
-            <div style="margin: 50px 0">
 
-            <asp:Button ID="ogrtClick" runat="server" Text="Öğretmen" CssClass="btn btn-default "  Width="332px" style="margin-right:30px; " OnClick="ogrtClick_Click"/>
-            <asp:Button ID="ogrenciclick" runat="server" Text="Öğrenci"  Width="332px" CssClass="btn btn-info " OnClick="ogrenciclick_Click"/>
-            </div>
+            <asp:Button ID="ogrtClick" runat="server" Text="Öğretmen" CssClass="btn btn-default "  Width="332px" style="margin-right:30px; font-size: 16px;" OnClick="ogrtClick_Click"/>
+            <asp:Button ID="ogrenciclick" runat="server" Text="Öğrenci"  Width="332px" CssClass="btn btn-info " OnClick="ogrenciclick_Click" style="font-size: 16px"/>
+            <br />
+            <br />
+            
             <div class="text-left">
                 <strong>
-                <asp:Label for="txtNumara" runat="server" Text="Label" CssClass="auto-style1">Kullanıcı Adı</asp:Label>
+                <asp:Label for="txtNumara" runat="server" Text="Label" CssClass="auto-style2">Kullanıcı Adı</asp:Label>
                 </strong>
                 <asp:TextBox ID="txtNumara" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <br />
             <div class="text-left">
                 <strong>
-                <asp:Label for="txtSifre" runat="server" Text="Label" CssClass="auto-style1">Şifre</asp:Label>
+                <asp:Label for="txtSifre" runat="server" Text="Label" CssClass="auto-style2">Şifre</asp:Label>
                 </strong>
                 <asp:TextBox ID="txtSifre" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             </div>
-            
+            <br />
            
-            <asp:Button ID="Button1" runat="server" Text="Giriş Yap" CssClass="btn btn-success" Width="700" OnClick="Button1_Click" style="margin-top:50px;"  />
+            <div class="text-right">
+            <asp:HyperLink ID="sifremiUnuttum" runat="server">Şifremi Unuttum</asp:HyperLink>
+           </div><br />
+
+            <asp:Button ID="Button1" runat="server" Text="Giriş Yap" CssClass="btn btn-success" Width="700" OnClick="Button1_Click" style=" font-size: 16px;"  />
            <style type="text/css">
                #<%= Button1.ClientID %>:focus {
                     outline: none;
@@ -59,11 +61,17 @@
                     border-color: #398439;
                 }
 
+               .auto-style2 {
+                   color: #0066FF;
+                   font-size: 16px;
+               }
+
              </style>
 
             <br />
             <br />
-             <asp:Label ID="Label1" runat="server" Text="Hatalı giriş yaptınız." CssClass="text-danger"  Visible="False"></asp:Label>
+            <div class="text-center">
+             <asp:Label ID="Label1" runat="server" Text="Hatalı giriş yaptınız." CssClass="text-danger"  Visible="False"></asp:Label></div>
         </div>
     </form>
 </body>
