@@ -25,10 +25,10 @@
                     <td><%# Eval("TARIH") %></td>
                     
                    
-                    <%--<td>
-                        <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "ogrenciSil.aspx?OGRID=" + Eval("OGRID") %>' runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>
-                        <asp:HyperLink ID="HyperLink2" NavigateUrl='<%# "ogrenciGuncelle.aspx?OGRID=" + Eval("OGRID") %>' runat="server" CssClass="btn btn-warning">Güncelle</asp:HyperLink>
-                    </td>--%>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "mesajSil.aspx?MESAJID=" + Eval("MESAJID") + "&tip=giden&rol=ogretmen" %>' runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>
+                       
+                    </td>
                 </tr>
             </ItemTemplate>
         </asp:Repeater>

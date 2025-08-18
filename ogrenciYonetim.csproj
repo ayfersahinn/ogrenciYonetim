@@ -484,6 +484,7 @@
     <Content Include="ogrenciGidenMesajlar.aspx" />
     <Content Include="ogrenciMesajOlustur.aspx" />
     <Content Include="ogrenciDuyurular.aspx" />
+    <Content Include="mesajSil.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="basePage.cs">
@@ -714,6 +715,13 @@
     </Compile>
     <Compile Include="ogrenciDuyurular.aspx.designer.cs">
       <DependentUpon>ogrenciDuyurular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mesajSil.aspx.cs">
+      <DependentUpon>mesajSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mesajSil.aspx.designer.cs">
+      <DependentUpon>mesajSil.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

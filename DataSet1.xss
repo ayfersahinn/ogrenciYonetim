@@ -11,7 +11,7 @@
     <Shape ID="DesignTable:TBL_OGRT" ZOrder="2" X="596" Y="72" Height="227" Width="289" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
     <Shape ID="DesignTable:OgrNotlar" ZOrder="6" X="1097" Y="355" Height="365" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="237" />
     <Shape ID="DesignTable:TBL_DERS" ZOrder="8" X="899" Y="95" Height="227" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
-    <Shape ID="DesignTable:TBL_MESAJ" ZOrder="1" X="82" Y="448" Height="296" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:TBL_MESAJ" ZOrder="1" X="82" Y="448" Height="319" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
     <Shape ID="DesignTable:DataTable1" ZOrder="5" X="797" Y="375" Height="205" Width="248" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
   </Shapes>
   <Connectors>
