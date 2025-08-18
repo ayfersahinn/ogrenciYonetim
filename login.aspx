@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="Button1">
         <div style="width:700px; margin:auto;" class="text-center" >
             <br />
             <h2 class="text-center text-bold" style="color:#286090; font-weight:bolder">Öğrenci Yönetim Sistemi Öğrenci Giriş</h2>
@@ -43,7 +43,24 @@
             </div>
             
            
-            <asp:Button ID="Button1" runat="server" Text="Giriş Yap" CssClass="btn btn-success" Width="700" OnClick="Button1_Click" style="margin-top:50px"/>
+            <asp:Button ID="Button1" runat="server" Text="Giriş Yap" CssClass="btn btn-success" Width="700" OnClick="Button1_Click" style="margin-top:50px;"  />
+           <style type="text/css">
+               #<%= Button1.ClientID %>:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+               #<%= Button1.ClientID %> {
+                    background-color: #5CB85C; 
+                    border-color: #4CAE4C;
+                }
+
+                #<%= Button1.ClientID %>:hover {
+                    background-color: #4CAE4C;
+                    border-color: #398439;
+                }
+
+             </style>
+
             <br />
             <br />
              <asp:Label ID="Label1" runat="server" Text="Hatalı giriş yaptınız." CssClass="text-danger"  Visible="False"></asp:Label>
