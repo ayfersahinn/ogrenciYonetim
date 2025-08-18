@@ -2127,6 +2127,8 @@ namespace ogrenciYonetim {
             
             private global::System.Data.DataColumn columnAD_SOYAD;
             
+            private global::System.Data.DataColumn columnGONDEREN;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TBL_MESAJDataTable() {
@@ -2194,6 +2196,14 @@ namespace ogrenciYonetim {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn GONDERENColumn {
+                get {
+                    return this.columnGONDEREN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2229,13 +2239,14 @@ namespace ogrenciYonetim {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TBL_MESAJRow AddTBL_MESAJRow(string BASLIK, string ICERIK, System.DateTime TARIH, string AD_SOYAD) {
+            public TBL_MESAJRow AddTBL_MESAJRow(string BASLIK, string ICERIK, System.DateTime TARIH, string AD_SOYAD, string GONDEREN) {
                 TBL_MESAJRow rowTBL_MESAJRow = ((TBL_MESAJRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         BASLIK,
                         ICERIK,
                         TARIH,
-                        AD_SOYAD};
+                        AD_SOYAD,
+                        GONDEREN};
                 rowTBL_MESAJRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTBL_MESAJRow);
                 return rowTBL_MESAJRow;
@@ -2262,6 +2273,7 @@ namespace ogrenciYonetim {
                 this.columnICERIK = base.Columns["ICERIK"];
                 this.columnTARIH = base.Columns["TARIH"];
                 this.columnAD_SOYAD = base.Columns["AD SOYAD"];
+                this.columnGONDEREN = base.Columns["GONDEREN"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2275,10 +2287,13 @@ namespace ogrenciYonetim {
                 base.Columns.Add(this.columnTARIH);
                 this.columnAD_SOYAD = new global::System.Data.DataColumn("AD SOYAD", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAD_SOYAD);
+                this.columnGONDEREN = new global::System.Data.DataColumn("GONDEREN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGONDEREN);
                 this.columnBASLIK.MaxLength = 50;
                 this.columnICERIK.MaxLength = 500;
                 this.columnAD_SOYAD.ReadOnly = true;
                 this.columnAD_SOYAD.MaxLength = 61;
+                this.columnGONDEREN.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3469,6 +3484,22 @@ namespace ogrenciYonetim {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string GONDEREN {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBL_MESAJ.GONDERENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GONDEREN\' in table \'TBL_MESAJ\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBL_MESAJ.GONDERENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsBASLIKNull() {
                 return this.IsNull(this.tableTBL_MESAJ.BASLIKColumn);
             }
@@ -3513,6 +3544,18 @@ namespace ogrenciYonetim {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetAD_SOYADNull() {
                 this[this.tableTBL_MESAJ.AD_SOYADColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGONDERENNull() {
+                return this.IsNull(this.tableTBL_MESAJ.GONDERENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGONDERENNull() {
+                this[this.tableTBL_MESAJ.GONDERENColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6223,6 +6266,7 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
             tableMapping.ColumnMappings.Add("ICERIK", "ICERIK");
             tableMapping.ColumnMappings.Add("TARIH", "TARIH");
             tableMapping.ColumnMappings.Add("AD SOYAD", "AD SOYAD");
+            tableMapping.ColumnMappings.Add("GONDEREN", "GONDEREN");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6240,6 +6284,7 @@ inner join TBL_DERS ON TBL_DERS.DERSID = TBL_NOT.DERSID WHERE NOTID=@NOTID";
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT 
+GONDEREN,
     COALESCE(TBL_OGRENCI.OGRAD + ' ' + TBL_OGRENCI.OGRSOYAD, 
              TBL_OGRT.OGRTADSOYAD) AS [AD SOYAD],
     BASLIK,
@@ -6255,52 +6300,17 @@ ORDER BY TARIH DESC
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ALICI", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "ALICI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT 
-ALICI,
-    COALESCE(TBL_OGRENCI.OGRAD + ' ' + TBL_OGRENCI.OGRSOYAD, 
-             TBL_OGRT.OGRTADSOYAD) AS [AD SOYAD],
-    BASLIK,
-    ICERIK,
-    TARIH
-FROM TBL_MESAJ
-LEFT JOIN TBL_OGRENCI ON TBL_MESAJ.ALICI = TBL_OGRENCI.OGRNO
-LEFT JOIN TBL_OGRT    ON TBL_MESAJ.ALICI = TBL_OGRT.OGRTNO
-WHERE GONDEREN = @GONDEREN
-ORDER BY TARIH DESC
-";
+            this._commandCollection[1].CommandText = @"SELECT COALESCE (TBL_OGRENCI.OGRAD + ' ' + TBL_OGRENCI.OGRSOYAD, TBL_OGRT.OGRTADSOYAD) AS [AD SOYAD], TBL_MESAJ.BASLIK, TBL_MESAJ.GONDEREN, TBL_MESAJ.ICERIK, TBL_MESAJ.TARIH FROM TBL_MESAJ LEFT OUTER JOIN TBL_OGRENCI ON TBL_MESAJ.ALICI = TBL_OGRENCI.OGRNO LEFT OUTER JOIN TBL_OGRT ON TBL_MESAJ.ALICI = TBL_OGRT.OGRTNO WHERE (TBL_MESAJ.GONDEREN = @GONDEREN) ORDER BY TBL_MESAJ.TARIH DESC";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GONDEREN", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "GONDEREN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT 
-    COALESCE(TBL_OGRENCI.OGRAD + ' ' + TBL_OGRENCI.OGRSOYAD, 
-             TBL_OGRT.OGRTADSOYAD) AS [AD SOYAD],
-    BASLIK,
-    ICERIK,
-    TARIH
-FROM TBL_MESAJ
-LEFT JOIN TBL_OGRENCI ON TBL_MESAJ.ALICI = TBL_OGRENCI.OGRNO
-LEFT JOIN TBL_OGRT    ON TBL_MESAJ.ALICI = TBL_OGRT.OGRTNO
-WHERE GONDEREN = @GONDEREN
-ORDER BY TARIH DESC
-";
+            this._commandCollection[2].CommandText = @"SELECT ALICI, COALESCE (TBL_OGRENCI.OGRAD + ' ' + TBL_OGRENCI.OGRSOYAD, TBL_OGRT.OGRTADSOYAD) AS [AD SOYAD], TBL_MESAJ.BASLIK, TBL_MESAJ.GONDEREN, TBL_MESAJ.ICERIK, TBL_MESAJ.TARIH FROM TBL_MESAJ LEFT OUTER JOIN TBL_OGRENCI ON TBL_MESAJ.ALICI = TBL_OGRENCI.OGRNO LEFT OUTER JOIN TBL_OGRT ON TBL_MESAJ.ALICI = TBL_OGRT.OGRTNO WHERE (TBL_MESAJ.GONDEREN = @GONDEREN) ORDER BY TBL_MESAJ.TARIH DESC";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GONDEREN", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "GONDEREN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT 
-GONDEREN,
-    COALESCE(TBL_OGRENCI.OGRAD + ' ' + TBL_OGRENCI.OGRSOYAD, 
-             TBL_OGRT.OGRTADSOYAD) AS [AD SOYAD],
-    BASLIK,
-    ICERIK,
-    TARIH
-FROM TBL_MESAJ
-LEFT JOIN TBL_OGRENCI ON TBL_MESAJ.GONDEREN = TBL_OGRENCI.OGRNO
-LEFT JOIN TBL_OGRT    ON TBL_MESAJ.GONDEREN = TBL_OGRT.OGRTNO
-WHERE ALICI = @ALICI 
-ORDER BY TARIH DESC
-";
+            this._commandCollection[3].CommandText = @"SELECT COALESCE (TBL_OGRENCI.OGRAD + ' ' + TBL_OGRENCI.OGRSOYAD, TBL_OGRT.OGRTADSOYAD) AS [AD SOYAD], TBL_MESAJ.BASLIK, TBL_MESAJ.GONDEREN, TBL_MESAJ.ICERIK, TBL_MESAJ.TARIH FROM TBL_MESAJ LEFT OUTER JOIN TBL_OGRENCI ON TBL_MESAJ.GONDEREN = TBL_OGRENCI.OGRNO LEFT OUTER JOIN TBL_OGRT ON TBL_MESAJ.GONDEREN = TBL_OGRT.OGRTNO WHERE (TBL_MESAJ.ALICI = @ALICI) ORDER BY TBL_MESAJ.TARIH DESC";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ALICI", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "ALICI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();

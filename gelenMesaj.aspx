@@ -5,7 +5,7 @@
       <table class="table table-bordered table-hover">
 
       <tr>
-          
+          <th scope="col">GÖNDEREN NO</th>          
           <th scope="col">GÖNDEREN</th>
           <th scope="col">BAŞLIK</th>
           <th scope="col">İÇERİK</th>
@@ -18,7 +18,7 @@
           <asp:Repeater ID="Repeater1" runat="server">
               <ItemTemplate>
                   <tr>
-                     
+                      <td><%# Eval("GONDEREN") %></td>                     
                       <td><%# Eval("AD SOYAD") %></td>
                       <td><%# Eval("BASLIK") %></td>
                       <td><%# Eval("ICERIK") %></td>
