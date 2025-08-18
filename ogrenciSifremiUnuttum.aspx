@@ -29,17 +29,17 @@
                 <strong>
                 <asp:Label for="txtSifre" runat="server" Text="Label" CssClass="auto-style2">Şifre</asp:Label>
                 </strong>
-                <asp:TextBox ID="txtSifre" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtSifre" runat="server" CssClass="form-control" TextMode="Password" autocomplete="off"></asp:TextBox>
             </div>
             <br />
             <div class="text-left">
                 <strong>
                     <asp:Label for="txtSifre2" runat="server" Text="Label" CssClass="auto-style2">Şifre Tekrar</asp:Label>
                 </strong>
-                <asp:TextBox ID="txtSifre2" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtSifre2" runat="server" CssClass="form-control" TextMode="Password" autocomplete="off"></asp:TextBox>
             </div>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Şifre Değiştir" CssClass="btn btn-success" Width="700" Style="font-size: 16px;" />
+            <asp:Button ID="Button1" runat="server" Text="Şifre Değiştir" CssClass="btn btn-success" Width="700" Style="font-size: 16px;" OnClick="Button1_Click" />
             <br />
             <style type="text/css">
                  #<%= Button1.ClientID %>:focus {

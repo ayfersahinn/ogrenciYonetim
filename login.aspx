@@ -35,14 +35,14 @@
             <br />
             <div class="text-left">
                 <strong>
-                <asp:Label for="txtSifre" runat="server" Text="Label" CssClass="auto-style2">Şifre</asp:Label>
+                <asp:Label for="txtSifre" runat="server" Text="Label" CssClass="auto-style2" >Şifre</asp:Label>
                 </strong>
-                <asp:TextBox ID="txtSifre" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtSifre" runat="server" CssClass="form-control" TextMode="Password" autocomplete="off"></asp:TextBox>
             </div>
             <br />
            
             <div class="text-right">
-            <asp:HyperLink ID="sifremiUnuttum" runat="server" NavigateUrl='sifremiUnuttum.aspx?rol=ogrenci'>Şifremi Unuttum</asp:HyperLink>
+            <asp:HyperLink ID="sifremiUnuttum" runat="server" NavigateUrl='ogrenciSifremiUnuttum.aspx'>Şifremi Unuttum</asp:HyperLink>
            </div><br />
 
             <asp:Button ID="Button1" runat="server" Text="Giriş Yap" CssClass="btn btn-success" Width="700" OnClick="Button1_Click" style=" font-size: 16px;"  />
