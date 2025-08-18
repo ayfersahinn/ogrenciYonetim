@@ -5,8 +5,7 @@
         <table class="table table-bordered table-hover">
 
     <tr>
-        <th scope="col">NOT ID</th>
-        <th scope="col">ID</th>
+      
         <th scope="col">ÖĞRENCİ AD SOYAD</th>
         <th scope="col">DERS ADI</th>
         <th scope="col">SINAV 1</th>
@@ -22,8 +21,7 @@
         <asp:Repeater ID="Repeater1" runat="server">
             <ItemTemplate>
                 <tr>
-                    <td><%# Eval("NOTID") %></td>
-                    <td><%# Eval("OGRID") %></td>
+                   
                     <td><%# Eval("OGRENCIADSOYAD") %></td>
                     <td><%# Eval("DERSAD") %></td>
                     <td><%# Eval("SINAV1") %></td>

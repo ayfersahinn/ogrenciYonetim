@@ -6255,7 +6255,19 @@ ORDER BY TARIH DESC
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ALICI", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "ALICI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT BASLIK, ICERIK, TARIH FROM TBL_MESAJ WHERE (GONDEREN = @GONDEREN)";
+            this._commandCollection[1].CommandText = @"SELECT 
+ALICI,
+    COALESCE(TBL_OGRENCI.OGRAD + ' ' + TBL_OGRENCI.OGRSOYAD, 
+             TBL_OGRT.OGRTADSOYAD) AS [AD SOYAD],
+    BASLIK,
+    ICERIK,
+    TARIH
+FROM TBL_MESAJ
+LEFT JOIN TBL_OGRENCI ON TBL_MESAJ.ALICI = TBL_OGRENCI.OGRNO
+LEFT JOIN TBL_OGRT    ON TBL_MESAJ.ALICI = TBL_OGRT.OGRTNO
+WHERE GONDEREN = @GONDEREN
+ORDER BY TARIH DESC
+";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GONDEREN", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "GONDEREN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -6276,7 +6288,19 @@ ORDER BY TARIH DESC
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GONDEREN", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "GONDEREN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT BASLIK, ICERIK, TARIH FROM TBL_MESAJ WHERE (ALICI = @ALICI)";
+            this._commandCollection[3].CommandText = @"SELECT 
+GONDEREN,
+    COALESCE(TBL_OGRENCI.OGRAD + ' ' + TBL_OGRENCI.OGRSOYAD, 
+             TBL_OGRT.OGRTADSOYAD) AS [AD SOYAD],
+    BASLIK,
+    ICERIK,
+    TARIH
+FROM TBL_MESAJ
+LEFT JOIN TBL_OGRENCI ON TBL_MESAJ.GONDEREN = TBL_OGRENCI.OGRNO
+LEFT JOIN TBL_OGRT    ON TBL_MESAJ.GONDEREN = TBL_OGRT.OGRTNO
+WHERE ALICI = @ALICI 
+ORDER BY TARIH DESC
+";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ALICI", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "ALICI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
