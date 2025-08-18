@@ -25,7 +25,7 @@
                     <td><%# Eval("TARIH") %></td>
                     
                    
-                    <td>
+                    <td class="text-center mx-auto">
                         <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "mesajSil.aspx?MESAJID=" + Eval("MESAJID") + "&tip=giden&rol=ogretmen" %>' runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>
                        
                     </td>
