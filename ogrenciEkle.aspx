@@ -7,7 +7,9 @@
         <div class="form-group">
             <h2 style="color: dimgray">Öğrenci Ekleme</h2>
             <br />
-           
+           <asp:Label ID="Label2" runat="server" role="alert" Style="display: block;" CssClass="alert alert-danger d-block" Text="Bu numaraya sahip öğrenci zaten mevcut. Farklı numara giriniz." Visible="False"></asp:Label>
+
+<br />
             <asp:Label ID="Label1" runat="server" role="alert"  style="display: block;" CssClass="alert alert-danger d-block" Text="Tüm alanları eksiksiz şekilde doldurunuz." Visible="False"></asp:Label>
                         <asp:TextBox ID="ogrNo" runat="server" CssClass="form-control" placeholder="Öğrenci No"> </asp:TextBox>
 <br />
