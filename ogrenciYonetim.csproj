@@ -454,6 +454,8 @@
     <Content Include="Dosyalar1\img\teacher.png" />
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
+    <Content Include="ogrenciSifremiUnuttum.aspx" />
+    <Content Include="ogretmenSifremiUnuttum.aspx" />
     <Content Include="ogrtLogin.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="StyleSheet2.css" />
@@ -519,12 +521,26 @@
     <Compile Include="ogrenci.Master.designer.cs">
       <DependentUpon>ogrenci.Master</DependentUpon>
     </Compile>
+    <Compile Include="ogrenciSifremiUnuttum.aspx.cs">
+      <DependentUpon>ogrenciSifremiUnuttum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenciSifremiUnuttum.aspx.designer.cs">
+      <DependentUpon>ogrenciSifremiUnuttum.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ogretmen.Master.cs">
       <DependentUpon>ogretmen.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ogretmen.Master.designer.cs">
       <DependentUpon>ogretmen.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ogretmenSifremiUnuttum.aspx.cs">
+      <DependentUpon>ogretmenSifremiUnuttum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogretmenSifremiUnuttum.aspx.designer.cs">
+      <DependentUpon>ogretmenSifremiUnuttum.aspx</DependentUpon>
     </Compile>
     <Compile Include="ogrtLogin.aspx.cs">
       <DependentUpon>ogrtLogin.aspx</DependentUpon>

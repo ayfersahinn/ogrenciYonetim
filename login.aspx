@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="Dosyalar1/bootstrap.min.css" rel="stylesheet" />
-    <title></title>
+    <title>Öğrenci Giriş</title>
     </head>
 <body>
     <form id="form1" runat="server" defaultbutton="Button1">
@@ -42,7 +42,7 @@
             <br />
            
             <div class="text-right">
-            <asp:HyperLink ID="sifremiUnuttum" runat="server">Şifremi Unuttum</asp:HyperLink>
+            <asp:HyperLink ID="sifremiUnuttum" runat="server" NavigateUrl='sifremiUnuttum.aspx?rol=ogrenci'>Şifremi Unuttum</asp:HyperLink>
            </div><br />
 
             <asp:Button ID="Button1" runat="server" Text="Giriş Yap" CssClass="btn btn-success" Width="700" OnClick="Button1_Click" style=" font-size: 16px;"  />
