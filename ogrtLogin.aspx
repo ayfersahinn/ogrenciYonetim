@@ -16,14 +16,15 @@
             <br />
             <div class="m-auto text-center">
             <asp:Image ID="Image1" runat="server" ImageUrl="Dosyalar1/img/teacher.png" Width="200px" Height="200px" />
-            <br />
-            <br />
+           
             </div>
-            <div>
+             <br />
+ <br />
+            
 
             <asp:Button ID="ogrtClick" runat="server" Text="Öğretmen" CssClass="btn btn-info " Width="332px" style="margin-right:30px; font-size: 16px;" OnClick="ogrtClick_Click"/>
             <asp:Button ID="ogrenciclick" runat="server" Text="Öğrenci" CssClass="btn btn-default " Width="332px" OnClick="ogrenciclick_Click" style="font-size: 16px"/>
-            </div><br />
+            <br />
 <br />
             <div class="text-left">
                 <strong>
