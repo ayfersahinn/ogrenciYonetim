@@ -20,7 +20,7 @@
             
             <br />
             <div class="m-auto text-center">
-            <asp:Image ID="Image1" runat="server" ImageUrl="Dosyalar1/teacher.png" Width="200px" Height="200px" />
+            <asp:Image ID="Image1" runat="server" ImageUrl="Dosyalar1/img/teacher.png" Width="200px" Height="200px" />
             </div>
             <div style="margin: 50px 0">
 

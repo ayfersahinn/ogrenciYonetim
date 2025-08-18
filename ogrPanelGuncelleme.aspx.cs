@@ -32,13 +32,13 @@ namespace ogrenciYonetim
 
         protected void btnKaydet_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(ogrTel.Text) || string.IsNullOrEmpty(ogrMail.Text) || string.IsNullOrEmpty(ogrSifre.Text))
+            if(string.IsNullOrEmpty(ogrTel.Text) || string.IsNullOrEmpty(ogrMail.Text) || string.IsNullOrEmpty(ogrSifre.Text) || string.IsNullOrEmpty(ogrFoto.Text))
             {
                 Label1.Visible = true;
             }
             else
             {
-                dt.ogrPanelGuncelle(ogrTel.Text, ogrMail.Text, ogrSifre.Text, ogrNo.Text);
+                dt.ogrPanelGuncelle(ogrTel.Text, ogrMail.Text, ogrSifre.Text, ogrFoto.Text, ogrNo.Text);
                 Response.Redirect("ogrenciDefault.aspx?OGRNO="+ogrNo.Text);
             }
         }

@@ -30,11 +30,17 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <h3>Öğrenci Menü</h3>
-                <strong>BS</strong>
-            </div>
 
+            </div>
+            <asp:Repeater ID="Repeater1" runat="server">
+                <ItemTemplate>
+                    <div class="text-center">
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("OGRFOTO") %>' Width="150px" Style="margin-bottom: 20px;" />
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
             <ul class="list-unstyled components">
-               
+
                 <li>
                     <a href="ogrenciDefault.aspx">
                         <i class="fas fa-home"></i>

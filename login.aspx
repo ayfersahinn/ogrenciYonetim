@@ -20,8 +20,9 @@
             
             <br />
             <div class="m-auto text-center">
-            <asp:Image ID="Image1" runat="server" ImageUrl="Dosyalar1/students.png" Width="200px" Height="200px" />
+            <asp:Image ID="Image1" runat="server" ImageUrl="Dosyalar1/img/students.png" Width="200px" Height="200px" />
             </div>
+            
             <div style="margin: 50px 0">
 
             <asp:Button ID="ogrtClick" runat="server" Text="Öğretmen" CssClass="btn btn-default "  Width="332px" style="margin-right:30px; " OnClick="ogrtClick_Click"/>
