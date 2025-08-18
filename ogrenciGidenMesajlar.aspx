@@ -10,6 +10,7 @@
         <th scope="col">BAŞLIK</th>
         <th scope="col">İÇERİK</th>
         <th scope="col">TARİH</th>
+        <th scope="col">İŞLEMLER</th>
         
 
     </tr>
@@ -23,8 +24,11 @@
                     <td><%# Eval("BASLIK") %></td>
                     <td><%# Eval("ICERIK") %></td>
                     <td><%# Eval("TARIH") %></td>
-                   
-                   
+                    <td class="text-center mx-auto">
+                        <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "mesajSil.aspx?MESAJID=" + Eval("MESAJID") + "&tip=giden&rol=ogrenci" %>' runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>
+
+                    </td>
+
                 </tr>
             </ItemTemplate>
         </asp:Repeater>
