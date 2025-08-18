@@ -29,7 +29,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Öğrenci Menü</h3>
+                <h3 class="text-center">Öğrenci Menü</h3>
 
             </div>
             <asp:Repeater ID="Repeater1" runat="server">
