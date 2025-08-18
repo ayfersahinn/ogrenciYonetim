@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Sınav Not Sistemi</title>
+    <title>Öğrenci Yönetim Sistemi</title>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
   <!-- Our Custom CSS -->
     <link href="Dosyalar1/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Menü</h3>
+                <h3 class="text-center">Öğretmen Menü</h3>
                 <strong>BS</strong>
             </div>
 

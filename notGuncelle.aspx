@@ -2,6 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+         <h2 style="color: dimgray">Öğrenci Not Güncelleme</h2>
+    <br />
 
      <form runat="server">
      <div class="form-group">

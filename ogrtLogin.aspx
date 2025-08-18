@@ -37,7 +37,7 @@
                 <strong>
                 <asp:Label for="txtSifre" runat="server" Text="Label" CssClass="auto-style2">Şifre</asp:Label>
                 </strong>
-                <asp:TextBox ID="txtSifre" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtSifre" runat="server" CssClass="form-control" TextMode="Password" autocomplete="off"></asp:TextBox>
             </div>
             <br />
             <div class="text-right">
