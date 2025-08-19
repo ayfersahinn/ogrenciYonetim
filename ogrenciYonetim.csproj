@@ -426,6 +426,8 @@
     <Content Include="Dosyalar1\img\student %286%29.png" />
     <Content Include="Dosyalar1\img\student %287%29.png" />
     <Content Include="Dosyalar1\img\student.png" />
+    <Content Include="Dosyalar1\img\teacher %281%29.png" />
+    <Content Include="Dosyalar1\img\teacherwoman.png" />
     <Content Include="Dosyalar1\img\write.png" />
     <Content Include="Dosyalar1\jquery-1.12.0.min.js" />
     <Content Include="Dosyalar1\js-bootstrap.min.js" />
@@ -487,6 +489,8 @@
     <Content Include="ogrenciMesajOlustur.aspx" />
     <Content Include="ogrenciDuyurular.aspx" />
     <Content Include="mesajSil.aspx" />
+    <Content Include="ogretmenAyarlar.aspx" />
+    <Content Include="ogretmenProfilGuncelleme.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="basePage.cs">
@@ -738,6 +742,20 @@
     </Compile>
     <Compile Include="mesajSil.aspx.designer.cs">
       <DependentUpon>mesajSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogretmenAyarlar.aspx.cs">
+      <DependentUpon>ogretmenAyarlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogretmenAyarlar.aspx.designer.cs">
+      <DependentUpon>ogretmenAyarlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogretmenProfilGuncelleme.aspx.cs">
+      <DependentUpon>ogretmenProfilGuncelleme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogretmenProfilGuncelleme.aspx.designer.cs">
+      <DependentUpon>ogretmenProfilGuncelleme.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
