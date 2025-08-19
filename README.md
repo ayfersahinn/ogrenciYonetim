@@ -8,7 +8,7 @@ Projede **Dataset** yapısı ve **Session yönetimi** kullanılmıştır.
 ## 📌 Kurulum
 1. Projeyi Visual Studio ile açıp çalıştırın.
 2. MSSQL üzerinde yeni bir veritabanı oluşturun.
-3. Proje içinde bulunan NotSistemi.sql dosyasını açın ve SQL Server üzerinde çalıştırarak tabloları ve gerekli yapıyı oluşturun.
+3. Proje içinde bulunan **scriptSql/NotSistemi.sql** dosyasını açın ve SQL Server üzerinde çalıştırarak tabloları ve gerekli yapıyı oluşturun.
 4. Web.config dosyasındaki connection string ayarlarını kendi veritabanınıza göre güncelleyin.
    
 ---
