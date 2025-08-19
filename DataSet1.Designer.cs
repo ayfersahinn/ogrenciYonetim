@@ -5294,7 +5294,7 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT OGRTID, OGRTADSOYAD, OGRTFOTO, OGRTBRANS, OGRTNO, OGRTSIFRE\r\nFROM     TBL_" +
@@ -5308,31 +5308,36 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTNO", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTNO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT COUNT(*) FROM TBL_OGRT WHERE OGRTNO=@OGRTNO AND OGRTSIFRE=@OGRTSIFRE";
+            this._commandCollection[2].CommandText = "SELECT OGRTFOTO\r\nFROM     TBL_OGRT WHERE OGRTNO=@OGRTNO";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTNO", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTNO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTSIFRE", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTSIFRE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTNO", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTNO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE [TBL_OGRT] SET [OGRTADSOYAD] = @OGRTADSOYAD, [OGRTBRANS] = @OGRTBRANS,  [O" +
-                "GRTFOTO] = @OGRTFOTO, [OGRTSIFRE] = @OGRTSIFRE WHERE [OGRTNO] = @OGRTNO";
+            this._commandCollection[3].CommandText = "SELECT COUNT(*) FROM TBL_OGRT WHERE OGRTNO=@OGRTNO AND OGRTSIFRE=@OGRTSIFRE";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTADSOYAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTADSOYAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTBRANS", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTBRANS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTFOTO", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTFOTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTNO", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTNO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTSIFRE", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTSIFRE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTNO", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTNO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "UPDATE [TBL_OGRT] SET   [OGRTSIFRE] = @OGRTSIFRE WHERE [OGRTNO] = @OGRTNO";
+            this._commandCollection[4].CommandText = "UPDATE [TBL_OGRT] SET [OGRTADSOYAD] = @OGRTADSOYAD, [OGRTBRANS] = @OGRTBRANS,  [O" +
+                "GRTFOTO] = @OGRTFOTO, [OGRTSIFRE] = @OGRTSIFRE WHERE [OGRTNO] = @OGRTNO";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTADSOYAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTADSOYAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTBRANS", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTBRANS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTFOTO", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTFOTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTSIFRE", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTSIFRE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTNO", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTNO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT COUNT(*) FROM TBL_OGRT WHERE OGRTNO=@OGRTNO";
+            this._commandCollection[5].CommandText = "UPDATE [TBL_OGRT] SET   [OGRTSIFRE] = @OGRTSIFRE WHERE [OGRTNO] = @OGRTNO";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTNO", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTNO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTSIFRE", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTSIFRE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTNO", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTNO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "SELECT COUNT(*) FROM TBL_OGRT WHERE OGRTNO=@OGRTNO";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRTNO", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRTNO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5384,6 +5389,42 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DataSet1.TBL_OGRTDataTable OgrtBilgileri(string OGRTNO) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((OGRTNO == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OGRTNO));
+            }
+            DataSet1.TBL_OGRTDataTable dataTable = new DataSet1.TBL_OGRTDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByOgrtFoto(DataSet1.TBL_OGRTDataTable dataTable, string OGRTNO) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((OGRTNO == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OGRTNO));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet1.TBL_OGRTDataTable OgrtFoto(string OGRTNO) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((OGRTNO == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -5553,7 +5594,7 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> ogrtGiris(string OGRTNO, string OGRTSIFRE) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((OGRTNO == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -5594,7 +5635,7 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int ogrtGuncelle(string OGRTADSOYAD, global::System.Nullable<int> OGRTBRANS, string OGRTFOTO, string OGRTSIFRE, string OGRTNO) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((OGRTADSOYAD == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -5647,7 +5688,7 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int ogrtParola(string OGRTSIFRE, string OGRTNO) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
             if ((OGRTSIFRE == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -5681,7 +5722,7 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual object ogrtVarMi(string OGRTNO) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
             if ((OGRTNO == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }

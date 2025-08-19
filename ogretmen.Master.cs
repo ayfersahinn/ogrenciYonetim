@@ -11,6 +11,9 @@ namespace ogrenciYonetim
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DataSet1TableAdapters.TBL_OGRTTableAdapter dt = new DataSet1TableAdapters.TBL_OGRTTableAdapter();
+            Repeater1.DataSource= dt.OgrtFoto(Session["OGRETMEN_NO"].ToString());
+            Repeater1.DataBind();
 
         }
     }
