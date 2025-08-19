@@ -16,7 +16,7 @@ namespace ogrenciYonetim
         DataSet1TableAdapters.TBL_MESAJTableAdapter dt = new DataSet1TableAdapters.TBL_MESAJTableAdapter();
         protected void Page_Load(object sender, EventArgs e)
         {
-            gonderen.Text = "1111";
+            gonderen.Text = Session["OGRETMEN_NO"].ToString();
         }
 
         protected void btn_mesaj_gonder_Click(object sender, EventArgs e)
