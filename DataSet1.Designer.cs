@@ -4131,8 +4131,8 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRNO", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OGRNO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT OGRAD, OGRID, OGRMAIL, OGRNO, OGRSIFRE, OGRSOYAD, OGRTEL FROM TBL_OGRENCI " +
-                "WHERE (OGRID = @OGRID)";
+            this._commandCollection[3].CommandText = "SELECT OGRAD, OGRID, OGRMAIL, OGRNO, OGRSIFRE, OGRSOYAD, OGRTEL, OGRFOTO FROM TBL" +
+                "_OGRENCI WHERE (OGRID = @OGRID)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OGRID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
@@ -4158,7 +4158,7 @@ namespace ogrenciYonetim.DataSet1TableAdapters {
             this._commandCollection[6].Connection = this.Connection;
             this._commandCollection[6].CommandText = "UPDATE [TBL_OGRENCI] SET [OGRAD] = @OGRAD, [OGRSOYAD] = @OGRSOYAD,  [OGRNO]=@OGRN" +
                 "O, [OGRTEL] = @OGRTEL, [OGRMAIL] = @OGRMAIL, [OGRSIFRE] = @OGRSIFRE, [OGRFOTO] =" +
-                " @OGRFOTO WHERE (([OGRID] = @OGRID))";
+                " @OGRFOTO WHERE [OGRID] = @OGRID";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRSOYAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OGRSOYAD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

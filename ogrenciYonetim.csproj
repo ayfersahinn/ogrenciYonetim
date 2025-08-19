@@ -459,6 +459,7 @@
     <Content Include="ogrenciSifremiUnuttum.aspx" />
     <Content Include="ogretmenSifremiUnuttum.aspx" />
     <Content Include="ogrtLogin.aspx" />
+    <Content Include="scriptSql\NotSistemi.sql" />
     <Content Include="StyleSheet.css" />
     <Content Include="StyleSheet2.css" />
     <Content Include="Web.config" />

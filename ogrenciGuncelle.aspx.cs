@@ -18,9 +18,7 @@ namespace ogrenciYonetim
         {
             if (!IsPostBack)
             {
-                try
-                {
-                    
+                
                     int id = Convert.ToInt32(Request.QueryString["OGRID"]);
                     ogrID.Text = id.ToString();
                     ogrNo.Text = dt.ogrenciGetir(id)[0].OGRNO;
@@ -29,14 +27,10 @@ namespace ogrenciYonetim
                     ogrTel.Text = dt.ogrenciGetir(id)[0].OGRTEL;
                     ogrMail.Text = dt.ogrenciGetir(id)[0].OGRMAIL;
                     ogrSifre.Text = dt.ogrenciGetir(id)[0].OGRSIFRE;
-                    ogrFoto.Text = dt.ogrenciGetir(id)[0].OGRFOTO;
+                    //ogrFoto.Text = dt.ogrenciGetir(id)[0].OGRFOTO;
 
-                }
-                catch (Exception)
-                {
+                ogrFoto.Text = dt.ogrenciGetir(id)[0].IsOGRFOTONull() ? "" : dt.ogrenciGetir(id)[0].OGRFOTO;
 
-                    ogrFoto.Text = "Link girin";
-                }
             }
 			
         }
@@ -44,7 +38,7 @@ namespace ogrenciYonetim
         protected void btnGuncelle_Click(object sender, EventArgs e)
         {
             
-            if (string.IsNullOrWhiteSpace(ogrAd.Text) || string.IsNullOrWhiteSpace(ogrNo.Text) || string.IsNullOrWhiteSpace(ogrSoyad.Text) || string.IsNullOrWhiteSpace(ogrTel.Text) || string.IsNullOrWhiteSpace(ogrMail.Text) || string.IsNullOrWhiteSpace(ogrSifre.Text))
+            if (string.IsNullOrWhiteSpace(ogrAd.Text) || string.IsNullOrWhiteSpace(ogrNo.Text) || string.IsNullOrWhiteSpace(ogrSoyad.Text) || string.IsNullOrWhiteSpace(ogrTel.Text) || string.IsNullOrWhiteSpace(ogrMail.Text) || string.IsNullOrWhiteSpace(ogrSifre.Text) || string.IsNullOrWhiteSpace(ogrFoto.Text))
             {
                 Label1.Visible = true;
             }
