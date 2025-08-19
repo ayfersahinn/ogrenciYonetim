@@ -1,4 +1,4 @@
-# Öğretmen ve Öğrenci Not Sistemi
+# 📚 Öğretmen ve Öğrenci Not Sistemi
 
 Bu proje, **.NET Framework (C#), MSSQL, HTML, CSS, Bootstrap ve JavaScript** kullanılarak geliştirilmiş bir **Öğretmen & Öğrenci Not Sistemi** uygulamasıdır.  
 Projede **Dataset** yapısı ve **Session yönetimi** kullanılmıştır.
@@ -58,7 +58,7 @@ Projede **Dataset** yapısı ve **Session yönetimi** kullanılmıştır.
 
 ---
 
-## 🔐 Ekran Görüntüleri
+## 📷 Ekran Görüntüleri
 <img width="1920" height="882" alt="Ekran görüntüsü 2025-08-19 183021" src="https://github.com/user-attachments/assets/dea4a82b-1f4f-4222-afd2-f581563747d6" />
 <img width="1918" height="871" alt="Ekran görüntüsü 2025-08-19 183005" src="https://github.com/user-attachments/assets/d50376cc-40bf-412a-91e7-27471c9b5e9d" />
 <img width="1910" height="857" alt="Ekran görüntüsü 2025-08-19 183043" src="https://github.com/user-attachments/assets/47c2772c-f60f-4942-8f1b-f09a89fde1c0" />
